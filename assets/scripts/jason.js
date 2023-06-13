@@ -2,7 +2,6 @@
 
 var searchButton = document.querySelector("#searchButton");
 var searchText = document.querySelector("#searchText");
-var localStorage;
 
 var searchedItem;
 var userSearches;
@@ -22,9 +21,27 @@ function findCover() {
 
 var searches = [];
 
+searchButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    
+    searches.push(searchText.value);
+    searchText.value = "";
+
+    localStorage.setItem("search", JSON.stringify(searches));
+    
+    // addSearchHistory();
+    // findCover();
+})
+
+function init () {
+    var searchesList = JSON.parse(localStorage.getItem("search"));
+    if (searchesList !== null) {
+        searches = searchesList;
+    }
+}
+
 function addSearchHistory() {
     // save to local storage
-    searches.push(searchText.value);
     console.log(searches);
     
     for (var i = 0; i < searches.length; i++) {
@@ -34,18 +51,4 @@ function addSearchHistory() {
     // userSearches is the list of searches to display while searches is an array of them
 }
 
-searchButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    
-    userSearches = JSON.stringify(localStorage.setItem("search", searchText.value));
-    
-    // addSearchHistory();
-    // findCover();
-
-})
-
-function init () {
-    
-    searches = JSON.parse(localStorage.getItem("searches"));
-
-}
+init();
