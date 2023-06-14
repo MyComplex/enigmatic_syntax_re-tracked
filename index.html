@@ -1,61 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css"
-    <title>Re-Tracked</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Re Track</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' href='assets/css/style.css'>
 </head>
 <body>
-    <div class="translucent-form-overlay">
-        <form>
-          <h3>Search for Properties</h3>
-          <div class="row columns">
-            <label>Keyword
-              <input type="text" name="keyword" placeholder="Any">
-            </label>
-          </div>
-          <div class="row columns">
-            <label>Property Status
-              <select name="status" type="text">
-                <option>Any</option>
-                <option value="rent">Rent</option>
-                <option value="buy">Buy</option>
-              </select>
-            </label>
-          </div>
-          <div class="row columns">
-            <label>Property Type
-              <select name="status" type="text">
-                <option>Any</option>
-                <option value="office">Office</option>
-                <option value="building">Building</option>
-              </select>
-            </label>
-          </div>
-          <div class="row columns">
-            <label>Location
-              <input type="text" name="location" placeholder="Any">
-            </label>
-          </div>
-          <div class="row">
-            <label class="columns small-12">Price</label>
-            <div class="columns small-6">
-              <input type="number" min="0" name="min" placeholder="Min">
-            </div>
-            <div class="columns small-6">
-              <input type="number" min="0" name="max" placeholder="Max">
-            </div>
-          </div>
-          <button type="button" class="primary button expanded search-button">
-            Search
-          </button>
-       </form>
-      </div>
-      
-      
-      
     
+    <div class='container'>        
+        <form action=''>
+            
+            <input type='hidden' id='hidden_token'>
+            <div class='col-sm-6 form-group row mt-4 px-0'>
+                <label for='Genre' class='form-label col-sm-2'>Genre:</label>
+                <select name='' id='select_genre' class='form-control form-control-sm col-sm-10'>
+                    <option>Select...</option>                    
+                </select>
+            </div>
+            <div class='col-sm-6 form-group row px-0'>
+                <label for='Genre' class='form-label col-sm-2'>Playlists:</label>
+                <select name='' id='select_playlist' class='form-control form-control-sm col-sm-10'>
+                    <option>Select...</option>                    
+                </select>
+            </div>                  
+            <div class='col-sm-6 row form-group px-0'>
+                <button type='submit' id='btn_submit' class='btn btn-success col-sm-12'>Search</button>
+            </div>          
+        </form>        
+        <div class='row'>
+            <div class='col-sm-6 px-0'>
+                <div class='list-group song-list'>
+                    
+                </div>                                             
+            </div>
+            <div class='offset-md-1 col-sm-4' id='song-detail'>                
+            </div>
+        </div>   
+    </div>
+      <script src="assets/scripts/LiDell script.js"></script>
 </body>
 </html>
