@@ -1,0 +1,313 @@
+{
+    "message": {
+        "header": {
+            "status_code": 200,
+            "execute_time": 0.094643115997314,
+            "available": 1330
+        },
+        "body": {
+            "track_list": [
+                {
+                    "track": {
+                        "track_id": 82316448,
+                        "track_name": "Never Gonna Give You Up",
+                        "track_name_translation_list": [],
+                        "track_rating": 13,
+                        "commontrack_id": 45867151,
+                        "instrumental": 1,
+                        "explicit": 0,
+                        "has_lyrics": 0,
+                        "has_subtitles": 0,
+                        "has_richsync": 0,
+                        "num_favourite": 0,
+                        "album_id": 20712538,
+                        "album_name": "Power Of 3",
+                        "artist_id": 362867,
+                        "artist_name": "The Sax Pack",
+                        "track_share_url": "https://www.musixmatch.com/lyrics/The-Sax-Pack/Never-Gonna-Give-You-Up?utm_source=application&utm_campaign=api&utm_medium=",
+                        "track_edit_url": "https://www.musixmatch.com/lyrics/The-Sax-Pack/Never-Gonna-Give-You-Up/edit?utm_source=application&utm_campaign=api&utm_medium=",
+                        "restricted": 0,
+                        "updated_time": "2015-08-16T17:36:58Z",
+                        "primary_genres": {
+                            "music_genre_list": [
+                                {
+                                    "music_genre": {
+                                        "music_genre_id": 11,
+                                        "music_genre_parent_id": 34,
+                                        "music_genre_name": "Jazz",
+                                        "music_genre_name_extended": "Jazz",
+                                        "music_genre_vanity": "Jazz"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "track": {
+                        "track_id": 17655695,
+                        "track_name": "Never Gonna Give You Up",
+                        "track_name_translation_list": [],
+                        "track_rating": 1,
+                        "commontrack_id": 11029050,
+                        "instrumental": 0,
+                        "explicit": 0,
+                        "has_lyrics": 0,
+                        "has_subtitles": 0,
+                        "has_richsync": 0,
+                        "num_favourite": 0,
+                        "album_id": 14223534,
+                        "album_name": "Crucial Dudes EP",
+                        "artist_id": 13804363,
+                        "artist_name": "Crucial Dudes",
+                        "track_share_url": "https://www.musixmatch.com/lyrics/Crucial-Dudes/Never-Gonna-Give-You-Up?utm_source=application&utm_campaign=api&utm_medium=",
+                        "track_edit_url": "https://www.musixmatch.com/lyrics/Crucial-Dudes/Never-Gonna-Give-You-Up/edit?utm_source=application&utm_campaign=api&utm_medium=",
+                        "restricted": 0,
+                        "updated_time": "2012-06-29T23:45:25Z",
+                        "primary_genres": {
+                            "music_genre_list": []
+                        }
+                    }
+                },
+                {
+                    "track": {
+                        "track_id": 4284199,
+                        "track_name": "Never Gonna Give You Up",
+                        "track_name_translation_list": [],
+                        "track_rating": 1,
+                        "commontrack_id": 7985078,
+                        "instrumental": 0,
+                        "explicit": 0,
+                        "has_lyrics": 0,
+                        "has_subtitles": 0,
+                        "has_richsync": 0,
+                        "num_favourite": 0,
+                        "album_id": 10573046,
+                        "album_name": "Fun",
+                        "artist_id": 175682,
+                        "artist_name": "New Baccara",
+                        "track_share_url": "https://www.musixmatch.com/lyrics/New-Baccara/Never-Gonna-Give-You-Up?utm_source=application&utm_campaign=api&utm_medium=",
+                        "track_edit_url": "https://www.musixmatch.com/lyrics/New-Baccara/Never-Gonna-Give-You-Up/edit?utm_source=application&utm_campaign=api&utm_medium=",
+                        "restricted": 0,
+                        "updated_time": "2011-06-12T20:54:14Z",
+                        "primary_genres": {
+                            "music_genre_list": []
+                        }
+                    }
+                },
+                {
+                    "track": {
+                        "track_id": 15582221,
+                        "track_name": "Never Gonna Give You Up",
+                        "track_name_translation_list": [],
+                        "track_rating": 1,
+                        "commontrack_id": 10106411,
+                        "instrumental": 0,
+                        "explicit": 0,
+                        "has_lyrics": 0,
+                        "has_subtitles": 0,
+                        "has_richsync": 0,
+                        "num_favourite": 0,
+                        "album_id": 13891873,
+                        "album_name": "Never Gonna Give You Up",
+                        "artist_id": 13811145,
+                        "artist_name": "Leland Jazz Radburn",
+                        "track_share_url": "https://www.musixmatch.com/lyrics/Leland-Jazz-Radburn/Never-Gonna-Give-You-Up?utm_source=application&utm_campaign=api&utm_medium=",
+                        "track_edit_url": "https://www.musixmatch.com/lyrics/Leland-Jazz-Radburn/Never-Gonna-Give-You-Up/edit?utm_source=application&utm_campaign=api&utm_medium=",
+                        "restricted": 0,
+                        "updated_time": "2011-10-08T08:25:39Z",
+                        "primary_genres": {
+                            "music_genre_list": []
+                        }
+                    }
+                },
+                {
+                    "track": {
+                        "track_id": 82807041,
+                        "track_name": "Never gonna give you up",
+                        "track_name_translation_list": [],
+                        "track_rating": 1,
+                        "commontrack_id": 46171666,
+                        "instrumental": 0,
+                        "explicit": 0,
+                        "has_lyrics": 0,
+                        "has_subtitles": 0,
+                        "has_richsync": 0,
+                        "num_favourite": 0,
+                        "album_id": 20759748,
+                        "album_name": "Music & Me",
+                        "artist_id": 244859,
+                        "artist_name": "BE THE VOICE",
+                        "track_share_url": "https://www.musixmatch.com/lyrics/BE-THE-VOICE/Never-gonna-give-you-up?utm_source=application&utm_campaign=api&utm_medium=",
+                        "track_edit_url": "https://www.musixmatch.com/lyrics/BE-THE-VOICE/Never-gonna-give-you-up/edit?utm_source=application&utm_campaign=api&utm_medium=",
+                        "restricted": 0,
+                        "updated_time": "2015-04-18T22:44:54Z",
+                        "primary_genres": {
+                            "music_genre_list": []
+                        }
+                    }
+                },
+                {
+                    "track": {
+                        "track_id": 55345187,
+                        "track_name": "Never Gonna Give U Up",
+                        "track_name_translation_list": [],
+                        "track_rating": 1,
+                        "commontrack_id": 26869535,
+                        "instrumental": 0,
+                        "explicit": 0,
+                        "has_lyrics": 0,
+                        "has_subtitles": 0,
+                        "has_richsync": 0,
+                        "num_favourite": 1,
+                        "album_id": 17290998,
+                        "album_name": "The Heist",
+                        "artist_id": 26546569,
+                        "artist_name": "Al Great",
+                        "track_share_url": "https://www.musixmatch.com/lyrics/Al-Great/Never-Gonna-Give-U-Up?utm_source=application&utm_campaign=api&utm_medium=",
+                        "track_edit_url": "https://www.musixmatch.com/lyrics/Al-Great/Never-Gonna-Give-U-Up/edit?utm_source=application&utm_campaign=api&utm_medium=",
+                        "restricted": 0,
+                        "updated_time": "2014-02-21T18:24:12Z",
+                        "primary_genres": {
+                            "music_genre_list": [
+                                {
+                                    "music_genre": {
+                                        "music_genre_id": 18,
+                                        "music_genre_parent_id": 34,
+                                        "music_genre_name": "Hip Hop/Rap",
+                                        "music_genre_name_extended": "Hip-Hop/Rap",
+                                        "music_genre_vanity": "Hip-Hop-Rap"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "track": {
+                        "track_id": 6741554,
+                        "track_name": "Never Gonna Give You Up - Acappella",
+                        "track_name_translation_list": [],
+                        "track_rating": 1,
+                        "commontrack_id": 22234934,
+                        "instrumental": 0,
+                        "explicit": 0,
+                        "has_lyrics": 0,
+                        "has_subtitles": 0,
+                        "has_richsync": 0,
+                        "num_favourite": 0,
+                        "album_id": 10792498,
+                        "album_name": "Never Gonna Give You Up",
+                        "artist_id": 145442,
+                        "artist_name": "Zero Point",
+                        "track_share_url": "https://www.musixmatch.com/lyrics/Zero-Point/Never-Gonna-Give-You-Up-a-cappella?utm_source=application&utm_campaign=api&utm_medium=",
+                        "track_edit_url": "https://www.musixmatch.com/lyrics/Zero-Point/Never-Gonna-Give-You-Up-a-cappella/edit?utm_source=application&utm_campaign=api&utm_medium=",
+                        "restricted": 0,
+                        "updated_time": "2016-02-03T01:31:35Z",
+                        "primary_genres": {
+                            "music_genre_list": [
+                                {
+                                    "music_genre": {
+                                        "music_genre_id": 17,
+                                        "music_genre_parent_id": 34,
+                                        "music_genre_name": "Dance",
+                                        "music_genre_name_extended": "Dance",
+                                        "music_genre_vanity": "Dance"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "track": {
+                        "track_id": 33157426,
+                        "track_name": "Rick Ashley - Never gonna give you up",
+                        "track_name_translation_list": [],
+                        "track_rating": 1,
+                        "commontrack_id": 13181183,
+                        "instrumental": 0,
+                        "explicit": 0,
+                        "has_lyrics": 0,
+                        "has_subtitles": 0,
+                        "has_richsync": 0,
+                        "num_favourite": 0,
+                        "album_id": 15430111,
+                        "album_name": "Pop Classics for Concert Band",
+                        "artist_id": 24611171,
+                        "artist_name": "The Band of the Belgian Navy & Peter Snellinckx",
+                        "track_share_url": "https://www.musixmatch.com/lyrics/The-Band-of-the-Belgian-Navy-Peter-Snellinckx/Rick-Ashley-Never-gonna-give-you-up?utm_source=application&utm_campaign=api&utm_medium=",
+                        "track_edit_url": "https://www.musixmatch.com/lyrics/The-Band-of-the-Belgian-Navy-Peter-Snellinckx/Rick-Ashley-Never-gonna-give-you-up/edit?utm_source=application&utm_campaign=api&utm_medium=",
+                        "restricted": 0,
+                        "updated_time": "2013-10-07T15:21:00Z",
+                        "primary_genres": {
+                            "music_genre_list": []
+                        }
+                    }
+                },
+                {
+                    "track": {
+                        "track_id": 56455482,
+                        "track_name": "Never Gonna Give You Up - 1987",
+                        "track_name_translation_list": [],
+                        "track_rating": 1,
+                        "commontrack_id": 27681589,
+                        "instrumental": 0,
+                        "explicit": 0,
+                        "has_lyrics": 0,
+                        "has_subtitles": 0,
+                        "has_richsync": 0,
+                        "num_favourite": 0,
+                        "album_id": 17404579,
+                        "album_name": "Lo Mejor De Los 80'S Vol.3",
+                        "artist_id": 24561437,
+                        "artist_name": "The Eight Group",
+                        "track_share_url": "https://www.musixmatch.com/lyrics/The-Eight-Group/Never-Gonna-Give-You-Up-1987?utm_source=application&utm_campaign=api&utm_medium=",
+                        "track_edit_url": "https://www.musixmatch.com/lyrics/The-Eight-Group/Never-Gonna-Give-You-Up-1987/edit?utm_source=application&utm_campaign=api&utm_medium=",
+                        "restricted": 0,
+                        "updated_time": "2015-05-07T11:11:09Z",
+                        "primary_genres": {
+                            "music_genre_list": [
+                                {
+                                    "music_genre": {
+                                        "music_genre_id": 14,
+                                        "music_genre_parent_id": 34,
+                                        "music_genre_name": "Pop",
+                                        "music_genre_name_extended": "Pop",
+                                        "music_genre_vanity": "Pop"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "track": {
+                        "track_id": 92713224,
+                        "track_name": "Never Gonna Give You Up - Anthone vs Kamaura Edit",
+                        "track_name_translation_list": [],
+                        "track_rating": 1,
+                        "commontrack_id": 51509726,
+                        "instrumental": 0,
+                        "explicit": 0,
+                        "has_lyrics": 0,
+                        "has_subtitles": 0,
+                        "has_richsync": 0,
+                        "num_favourite": 0,
+                        "album_id": 20161834,
+                        "album_name": "Magaluf Pool Party 2015",
+                        "artist_id": 30263729,
+                        "artist_name": "Kamaura, Jenny Jones & Anthone",
+                        "track_share_url": "https://www.musixmatch.com/lyrics/Kamaura-Jenny-Jones-Anthone/Never-Gonna-Give-You-Up-Anthone-vs-Kamaura-Edit?utm_source=application&utm_campaign=api&utm_medium=",
+                        "track_edit_url": "https://www.musixmatch.com/lyrics/Kamaura-Jenny-Jones-Anthone/Never-Gonna-Give-You-Up-Anthone-vs-Kamaura-Edit/edit?utm_source=application&utm_campaign=api&utm_medium=",
+                        "restricted": 0,
+                        "updated_time": "2016-01-13T12:12:09Z",
+                        "primary_genres": {
+                            "music_genre_list": []
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,61 +1,63 @@
 /* Jason's area */
 
-var searchButton = document.querySelector("#searchButton");
-var searchText = document.querySelector("#searchText");
+// var searchButton = document.querySelector("#searchButton");
+// var searchText = document.querySelector("#searchText");
 
-var searchedItem;
-var userSearches;
+// var searchedItem;
+// var userSearches;
 
-// var searchParameters = {
-//     title: // fetch required
-//     artist: // fetch required
+// // var searchParameters = {
+// //     title: // fetch required
+// //     artist: // fetch required
     
-// }
+// // }
 
-// var pushToStorage = [];
+// // var pushToStorage = [];
 
-// function findCover() {
-    // add fetch here
+// // function findCover() {
+//     // add fetch here
 
-// }
+// // }
 
-var searches = [];
+// var searches = [];
 
-searchButton.addEventListener("click", function(event) {
-    event.preventDefault();
+// searchButton.addEventListener("click", function(event) {
+//     event.preventDefault();
     
-    searches.push(searchText.value);
-    searchText.value = "";
+//     searches.push(searchText.value);
+//     searchText.value = "";
 
-    localStorage.setItem("search", JSON.stringify(searches));
+//     localStorage.setItem("search", JSON.stringify(searches));
     
-    // addSearchHistory();
-    // findCover();
-})
+//     // addSearchHistory();
+//     // findCover();
+// })
 
-// function init () {
-//     var searchesList = JSON.parse(localStorage.getItem("search"));
-//     if (searchesList !== null) {
-//         searches = searchesList;
-//     }
-// }
+// // function init () {
+// //     var searchesList = JSON.parse(localStorage.getItem("search"));
+// //     if (searchesList !== null) {
+// //         searches = searchesList;
+// //     }
+// // }
 
-// function addSearchHistory() {
-//     // save to local storage
-//     console.log(searches);
+// // function addSearchHistory() {
+// //     // save to local storage
+// //     console.log(searches);
     
-//     for (var i = 0; i < searches.length; i++) {
-//         console.log(searches[i]);
-//     }
-//     // userSearches.textContent = searches;
-//     // userSearches is the list of searches to display while searches is an array of them
-// }
+// //     for (var i = 0; i < searches.length; i++) {
+// //         console.log(searches[i]);
+// //     }
+// //     // userSearches.textContent = searches;
+// //     // userSearches is the list of searches to display while searches is an array of them
+// // }
 
-init();
+// // init();
 
 /* Jason's area */
 
 /* Jackson's area */
+
+//musixmatch track search api query string https://api.musixmatch.com/ws/1.1/track.search?q_track=thunderstruck&apikey=1bea274e43466310a83604d5c9dffd24
 var searchInput = document.getElementById("search-input");
 var searchButton = document.getElementById("search-button");
 var resultsContainer = document.getElementById("results-container");
@@ -66,13 +68,9 @@ function performSearch(event) {
   event.preventDefault();
   var searchTerm = searchInput.value;
   console.log(searchTerm);
-  var apiUrl = `https://api.publicapis.org/entries=${encodeURIComponent(searchTerm)}`;
+  var apiUrl = `https://api.musixmatch.com/ws/1.1/track.search?q_track=${encodeURIComponent(searchTerm)}&apikey=1bea274e43466310a83604d5c9dffd24`;
 
-  fetch(apiUrl, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
+  fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => displayResults(data))
     .catch((error) => console.log(error));

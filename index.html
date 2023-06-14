@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://bucky-cors-proxy.herokuapp.com/fetch.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,9 +36,9 @@
       <p>Find your favorite songs done by different artists.</p>
       <h3>Enter the song and artist.</h3>
       <form class="input-group input-group-rounded">
-        <input class="input-group-field" type="search" value="Never Gonna Give You Up">
+        <input class="input-group-field" id="search-input" type="search" value="Never Gonna Give You Up">
         <fieldset class="input-group-button">
-          <button class="button">Search</button>
+          <button id="search-button" class="button">Search</button>
         </fieldset>
       </form>
     </section>
