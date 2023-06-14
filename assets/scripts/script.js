@@ -1,37 +1,89 @@
-/* Jason's area */
-
+/* Code to run */
+/*JG*/
 var searchButton = document.querySelector("#searchButton");
 var searchText = document.querySelector("#searchText");
+
+console.log(searchText.value);
 
 var searchedItem;
 var userSearches;
 
+var searches = [];
+
+searchButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    searches.push(searchText.value);
+    // searchText.value = "";
+
+    localStorage.setItem("search", JSON.stringify(searches));
+    performSearch(searchText.value);
+})
+
+function init() {
+    var searchesList = JSON.parse(localStorage.getItem("search"));
+    if (searchesList !== null) {
+        searches = searchesList;
+    }
+}
+
+init();
+/*JG*/
+/*JH*/
+function performSearch(event) {
+    // event.preventDefault();
+    var searchTerm = event;
+    console.log(searchTerm);
+    var apiUrl = `https://secondhandsongs.com/search/performance?format=json&title=${encodeURIComponent(searchTerm)}`;
+
+    fetch(apiUrl, {
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+        .then((response) => response.json())
+        .then((data) => displayResults(data))
+        .catch((error) => console.log(error));
+
+    console.log(apiUrl);
+}
+/*JH*/
+
+/* Code to run */
+
+/* Jason's area */
+
+// var searchButton = document.querySelector("#searchButton");
+// var searchText = document.querySelector("#searchText");
+
+// var searchedItem;
+// var userSearches;
+
 // var searchParameters = {
 //     title: // fetch required
 //     artist: // fetch required
-    
+
 // }
 
 // var pushToStorage = [];
 
 // function findCover() {
-    // add fetch here
+// add fetch here
 
 // }
 
-var searches = [];
+// var searches = [];
 
-searchButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    
-    searches.push(searchText.value);
-    searchText.value = "";
+// searchButton.addEventListener("click", function(event) {
+//     event.preventDefault();
 
-    localStorage.setItem("search", JSON.stringify(searches));
-    
-    // addSearchHistory();
-    // findCover();
-})
+//     searches.push(searchText.value);
+//     searchText.value = "";
+
+//     localStorage.setItem("search", JSON.stringify(searches));
+
+// addSearchHistory();
+// findCover();
 
 // function init () {
 //     var searchesList = JSON.parse(localStorage.getItem("search"));
@@ -43,7 +95,7 @@ searchButton.addEventListener("click", function(event) {
 // function addSearchHistory() {
 //     // save to local storage
 //     console.log(searches);
-    
+
 //     for (var i = 0; i < searches.length; i++) {
 //         console.log(searches[i]);
 //     }
@@ -51,96 +103,52 @@ searchButton.addEventListener("click", function(event) {
 //     // userSearches is the list of searches to display while searches is an array of them
 // }
 
-init();
+// init();
 
 /* Jason's area */
 
 /* Jackson's area */
-var searchInput = document.getElementById("search-input");
-var searchButton = document.getElementById("search-button");
-var resultsContainer = document.getElementById("results-container");
 
-searchButton.addEventListener("click", performSearch);
+// var searchInput = document.getElementById("search-input");
+// var searchButton = document.getElementById("search-button");
+// var resultsContainer = document.getElementById("results-container");
 
-function performSearch(event) {
-  event.preventDefault();
-  var searchTerm = searchInput.value;
-  console.log(searchTerm);
-  var apiUrl = `https://api.publicapis.org/entries=${encodeURIComponent(searchTerm)}`;
+// searchButton.addEventListener("click", performSearch);
 
-  fetch(apiUrl, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => displayResults(data))
-    .catch((error) => console.log(error));
+// function performSearch(event) {
+//     event.preventDefault();
+//     var searchTerm = searchInput.value;
+//     console.log(searchTerm);
+//     var apiUrl = `https://api.publicapis.org/entries=${encodeURIComponent(searchTerm)}`;
 
-  console.log(apiUrl);
-}
+//     fetch(apiUrl, {
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//     })
+//         .then((response) => response.json())
+//         .then((data) => displayResults(data))
+//         .catch((error) => console.log(error));
 
-function displayResults(data) {
-  resultsContainer.innerHTML = "";
+//     console.log(apiUrl);
+// }
 
-  data.forEach((result) => {
-    var resultItem = document.createElement("div");
-    resultItem.textContent = result.title;
-    resultsContainer.appendChild(resultItem);
-  });
-}
+// function displayResults(data) {
+//     resultsContainer.innerHTML = "";
+
+//     data.forEach((result) => {
+//         var resultItem = document.createElement("div");
+//         resultItem.textContent = result.title;
+//         resultsContainer.appendChild(resultItem);
+//     });
+// }
 
 /* Jackson's area */
 
 /* Lidell's area */
-//var searchInput = document.getElementById('searchInput');
-//var searchInput = document.getElementById('searchButton');
-//var resultsContainer = document.getElementById('resultsContainer');
 
-//searchButton.addEventListener('click', performSearch);
+const APIController = (function () {
 
-
-
-//function performSearch() {
-	//var searchTerm = searchInput.value;
-	//var apiUrl = 'https://geniurl.p.rapidapi.com';
-	//fetch(apiUrl)
-	//.then(response => {
-		//if (Response.ok) {
-			//return response.text ();
-	
-		//}
-		//throw new error ("Network response was not okay.");
-	
-	//})
-	//.then(data => {
-		//console.log(data);
-	//})
-	//.catch(error => {
-		//console.log("Error:", error.message );
-	//});
-//}
-
-
-//const url = 'https://geniurl.p.rapidapi.com/search/top?q=';
-//const options = {
-	//method: 'GET',
-	//headers: {
-		//'X-RapidAPI-Key': '4606a0362emshc310b7ca9dde0cdp18a062jsn9da105ff87dc',
-		//'X-RapidAPI-Host': 'geniurl.p.rapidapi.com'
-	//}
-//};
-
-//try {
-	//const response = await fetch(url, options);
-	//const result = await response.text();
-	//console.log(result);
-//} catch (error) {
-	//console.error(error);
-//}
-
-const APIController = (function() {
-    
     const clientId = '07ff8b4538b94722848066ac1547ceb1';
     const clientSecret = 'e29634d15e1d4ac4bf533209bcc77367';
 
@@ -150,8 +158,8 @@ const APIController = (function() {
         const result = await fetch('https://accounts.spotify.com/api/token', {
             method: 'POST',
             headers: {
-                'Content-Type' : 'application/x-www-form-urlencoded', 
-                'Authorization' : 'Basic ' + btoa( clientId + ':' + clientSecret)
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
             },
             body: 'grant_type=client_credentials'
         });
@@ -159,12 +167,12 @@ const APIController = (function() {
         const data = await result.json();
         return data.access_token;
     }
-    
+
     const _getGenres = async (token) => {
 
         const result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=sv_US`, {
             method: 'GET',
-            headers: { 'Authorization' : 'Bearer ' + token}
+            headers: { 'Authorization': 'Bearer ' + token }
         });
 
         const data = await result.json();
@@ -174,10 +182,10 @@ const APIController = (function() {
     const _getPlaylistByGenre = async (token, genreId) => {
 
         const limit = 10;
-        
+
         const result = await fetch(`https://api.spotify.com/v1/browse/categories/${genreId}/playlists?limit=${limit}`, {
             method: 'GET',
-            headers: { 'Authorization' : 'Bearer ' + token}
+            headers: { 'Authorization': 'Bearer ' + token }
         });
 
         const data = await result.json();
@@ -190,7 +198,7 @@ const APIController = (function() {
 
         const result = await fetch(`${tracksEndPoint}?limit=${limit}`, {
             method: 'GET',
-            headers: { 'Authorization' : 'Bearer ' + token}
+            headers: { 'Authorization': 'Bearer ' + token }
         });
 
         const data = await result.json();
@@ -201,7 +209,7 @@ const APIController = (function() {
 
         const result = await fetch(`${trackEndPoint}`, {
             method: 'GET',
-            headers: { 'Authorization' : 'Bearer ' + token}
+            headers: { 'Authorization': 'Bearer ' + token }
         });
 
         const data = await result.json();
@@ -229,7 +237,7 @@ const APIController = (function() {
 
 
 // UI Module
-const UIController = (function() {
+const UIController = (function () {
 
     //object to hold references to html selectors
     const DOMElements = {
@@ -259,7 +267,7 @@ const UIController = (function() {
         createGenre(text, value) {
             const html = `<option value="${value}">${text}</option>`;
             document.querySelector(DOMElements.selectGenre).insertAdjacentHTML('beforeend', html);
-        }, 
+        },
 
         createPlaylist(text, value) {
             const html = `<option value="${value}">${text}</option>`;
@@ -279,8 +287,8 @@ const UIController = (function() {
             // any time user clicks a new song, we need to clear out the song detail div
             detailDiv.innerHTML = '';
 
-            const html = 
-            `
+            const html =
+                `
             <div class="row col-sm-12 px-0">
                 <img src="${img}" alt="">        
             </div>
@@ -308,7 +316,7 @@ const UIController = (function() {
             this.inputField().playlist.innerHTML = '';
             this.resetTracks();
         },
-        
+
         storeToken(value) {
             document.querySelector(DOMElements.hfToken).value = value;
         },
@@ -322,7 +330,7 @@ const UIController = (function() {
 
 })();
 
-const APPController = (function(UICtrl, APICtrl) {
+const APPController = (function (UICtrl, APICtrl) {
 
     // get input field object ref
     const DOMInputs = UICtrl.inputField();
@@ -330,7 +338,7 @@ const APPController = (function(UICtrl, APICtrl) {
     // get genres on page load
     const loadGenres = async () => {
         //get the token
-        const token = await APICtrl.getToken();           
+        const token = await APICtrl.getToken();
         //store the token onto the page
         UICtrl.storeToken(token);
         //get the genres
@@ -344,17 +352,17 @@ const APPController = (function(UICtrl, APICtrl) {
         //reset the playlist
         UICtrl.resetPlaylist();
         //get the token that's stored on the page
-        const token = UICtrl.getStoredToken().token;        
+        const token = UICtrl.getStoredToken().token;
         // get the genre select field
-        const genreSelect = UICtrl.inputField().genre;       
+        const genreSelect = UICtrl.inputField().genre;
         // get the genre id associated with the selected genre
-        const genreId = genreSelect.options[genreSelect.selectedIndex].value;             
+        const genreId = genreSelect.options[genreSelect.selectedIndex].value;
         // ge the playlist based on a genre
-        const playlist = await APICtrl.getPlaylistByGenre(token, genreId);       
+        const playlist = await APICtrl.getPlaylistByGenre(token, genreId);
         // create a playlist list item for every playlist returned
         playlist.forEach(p => UICtrl.createPlaylist(p.name, p.tracks.href));
     });
-     
+
 
     // create submit button click event listener
     DOMInputs.submit.addEventListener('click', async (e) => {
@@ -363,7 +371,7 @@ const APPController = (function(UICtrl, APICtrl) {
         // clear tracks
         UICtrl.resetTracks();
         //get the token
-        const token = UICtrl.getStoredToken().token;        
+        const token = UICtrl.getStoredToken().token;
         // get the playlist field
         const playlistSelect = UICtrl.inputField().playlist;
         // get track endpoint based on the selected playlist
@@ -372,7 +380,7 @@ const APPController = (function(UICtrl, APICtrl) {
         const tracks = await APICtrl.getTracks(token, tracksEndPoint);
         // create a track list item
         tracks.forEach(el => UICtrl.createTrack(el.track.href, el.track.name))
-        
+
     });
 
     // create song selection click event listener
@@ -388,7 +396,7 @@ const APPController = (function(UICtrl, APICtrl) {
         const track = await APICtrl.getTrack(token, trackEndpoint);
         // load the track details
         UICtrl.createTrackDetail(track.album.images[2].url, track.name, track.artists[0].name);
-    });    
+    });
 
     return {
         init() {
