@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="assets/css/style.css"
     <title>Re-Tracked</title>
 </head>
-<body>
+<body> 
     <div class="translucent-form-overlay">
         <form>
           <h3>Search for Properties</h3>
           <div class="row columns">
-            <label>Keyword
-              <input type="text" name="keyword" placeholder="Any">
+            <label>Keyword 
+              <input type="text"
+              id ="search-input"
+              name="keyword" placeholder="Enter Song">
             </label>
           </div>
           <div class="row columns">
@@ -48,14 +50,16 @@
               <input type="number" min="0" name="max" placeholder="Max">
             </div>
           </div>
-          <button type="button" class="primary button expanded search-button">
+          <button type="button" 
+          id="search-button"
+          class="primary button expanded search-button">
             Search
           </button>
+        <div class="Results" id="results-container"
+        type="text">
+        </div>
        </form>
       </div>
-      
-      
-      
-    
+      <script src="./assets/scripts/jackson.js"></script>
 </body>
 </html>

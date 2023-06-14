@@ -36,4 +36,9 @@
     color: #8a8a8a;
   }
   
-  
+  #resultsContainer {
+    outline-color: 2px green
+    position fixed;
+    top: 50px;
+    right: 20px;
+  }
