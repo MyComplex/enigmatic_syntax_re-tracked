@@ -4,16 +4,15 @@
 }
 
 .top-content-section {
+  display: flex;
   width: 100%;
   background: black;
+  height: 10vh;
 }
 
 .top-bar {
   background: transparent;
-}
-
-.top-bar .menu {
-  background: transparent;
+  width: 100%;
 }
 
 .top-bar .menu-text {
@@ -21,19 +20,7 @@
   font-size: larger;
 }
 
-.top-bar .menu li {
-  display: flex;
-  align-items: center;
-  
-}
-
-/* .top-bar .menu li img {
-  height: 75px;
-  box-shadow: 1px 1px 2px blue;
-}
-*/
-
-.top-bar .menu button {
+.top-bar button {
   background-color: black;
   color: #696969;
   font-weight: bold;
@@ -97,6 +84,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 10vh;
 }
 
 .social-footer .social-footer-icons li:last-of-type {
