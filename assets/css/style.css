@@ -1,44 +1,108 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0px;
+  margin: 0px;
 }
 
+.top-content-section {
+  display: flex;
+  width: 100%;
+  background: black;
+  height: 10vh;
+}
 
-.translucent-form-overlay {
-    max-width: 500px;
-    width: 100%;
-    background-color: rgba(54, 54, 54, 0.8);
-    padding: 20px;
-    color: #fefefe;
-  }
-  
-  .translucent-form-overlay .columns.row {
-    display: block;
-  }
-  
-  .translucent-form-overlay h3, .translucent-form-overlay label {
-    color: #fefefe;
-  }
-  
-  .translucent-form-overlay input, .translucent-form-overlay select {
-    color: #8a8a8a;
-  }
-  
-  .translucent-form-overlay input::-webkit-input-placeholder {
-    color: #8a8a8a;
-  }
-  
-  .translucent-form-overlay input:-ms-input-placeholder {
-    color: #8a8a8a;
-  }
-  
-  .translucent-form-overlay input::placeholder {
-    color: #8a8a8a;
-  }
-  
-  #resultsContainer {
-    outline-color: 2px green
-    position fixed;
-    top: 50px;
-    right: 20px;
-  }
+.top-bar {
+  background: transparent;
+  width: 100%;
+}
+
+.top-bar .menu-text {
+  color: dimgray;
+  font-size: larger;
+}
+
+.top-bar button {
+  background-color: black;
+  color: #696969;
+  font-weight: bold;
+  height: 40px;
+  min-width: 70px;
+  padding: 10px;
+  margin-right: 30px;
+  box-shadow: 3px 3px 9px 1px blue;
+  border-radius: 10px;
+}
+
+h1 {
+  color: white;
+  font-family: 'Climate Crisis', cursive;
+  text-shadow: 2px 2px 4px red;
+}
+
+p {
+  font-family: 'Spline Sans', sans-serif;
+  padding: 30px;
+  margin-bottom: -30px;
+  color: white;
+}
+
+.hero-section {
+  background-color: black;
+  height: 80vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  font-family: 'Play', sans-serif;
+  text-shadow: 1px 1px 2px #565a5c;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.input-group-rounded .input-group-field {
+  border-radius: 5000px 0 0 5000px;
+  padding-left: 1rem;
+  margin: 0 0 0 30px;
+  max-width: 600px;
+}
+
+.input-group-rounded .input-group-button .button {
+  border-radius: 0 5000px 5000px 0;
+  width: 100px;
+  background-color: red;
+  font-size: 0.8rem;
+  margin: 0 30px 0 0;
+}
+
+.social-footer {
+  padding: 1rem;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+.social-footer .social-footer-icons li:last-of-type {
+  margin-right: 0;
+}
+
+.social-footer .social-footer-icons .fa {
+  font-size: 1.3rem;
+  color: #acc0c6;
+}
+
+.social-footer .social-footer-icons .fa:hover {
+  color: white;
+  transition: color 0.3s ease-in;
+}
+
+h6 {
+  color: #a5acaf;
+  font-family: 'Spline Sans', sans-serif;
+}

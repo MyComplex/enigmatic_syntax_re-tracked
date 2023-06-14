@@ -5,10 +5,9 @@ var resultsContainer = document.getElementById("results-container");
 searchButton.addEventListener("click", performSearch);
 
 function performSearch(event) {
-  event.preventDefault();
   var searchTerm = searchInput.value;
   console.log(searchTerm);
-  var apiUrl = `https://api.publicapis.org/entries=${encodeURIComponent(searchTerm)}`;
+  var apiUrl = `https://secondhandsongs.com/search/performance?format=json&title=${encodeURIComponent(searchTerm)}`;
 
   fetch(apiUrl, {
     headers: {
