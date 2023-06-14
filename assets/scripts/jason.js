@@ -14,10 +14,10 @@ var userSearches;
 
 // var pushToStorage = [];
 
-function findCover() {
+// function findCover() {
     // add fetch here
 
-}
+// }
 
 var searches = [];
 
@@ -33,22 +33,22 @@ searchButton.addEventListener("click", function(event) {
     // findCover();
 })
 
-function init () {
-    var searchesList = JSON.parse(localStorage.getItem("search"));
-    if (searchesList !== null) {
-        searches = searchesList;
-    }
-}
+// function init () {
+//     var searchesList = JSON.parse(localStorage.getItem("search"));
+//     if (searchesList !== null) {
+//         searches = searchesList;
+//     }
+// }
 
-function addSearchHistory() {
-    // save to local storage
-    console.log(searches);
+// function addSearchHistory() {
+//     // save to local storage
+//     console.log(searches);
     
-    for (var i = 0; i < searches.length; i++) {
-        console.log(searches[i]);
-    }
-    // userSearches.textContent = searches;
-    // userSearches is the list of searches to display while searches is an array of them
-}
+//     for (var i = 0; i < searches.length; i++) {
+//         console.log(searches[i]);
+//     }
+//     // userSearches.textContent = searches;
+//     // userSearches is the list of searches to display while searches is an array of them
+// }
 
-init();
+// init();
