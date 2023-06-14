@@ -51,4 +51,4 @@ searchButton.addEventListener("click", function(event) {
 //     // userSearches is the list of searches to display while searches is an array of them
 // }
 
-// init();
+init();
