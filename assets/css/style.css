@@ -54,6 +54,10 @@ p {
   justify-content: center;
 }
 
+.hero-section-text {
+  display: block;
+}
+
 h3 {
   font-family: 'Play', sans-serif;
   text-shadow: 1px 1px 2px #565a5c;
@@ -106,3 +110,4 @@ h6 {
   color: #a5acaf;
   font-family: 'Spline Sans', sans-serif;
 }
+
