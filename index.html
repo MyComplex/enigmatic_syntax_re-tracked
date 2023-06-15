@@ -19,14 +19,13 @@
 
   <header class="top-content-section">
     <form class="top-bar">
-      <fieldset class="top-bar-left">
-        <legend class="menu-text">Previous Tracks</legend>  
-          <button>Song One</button>
-          <button>Song Two</button>
-          <button>Song Three</button>
-          <button>Song Four</button>
+      <!-- <legend class="menu-text">Previous Tracks</legend> -->
+      <fieldset id="listItem" class="top-bar-left">
+
+          
       </fieldset>
     </form>
+    <button id="clearHistory">Song Four</button>
   </header>
 
   <main class="hero-section">
@@ -35,9 +34,9 @@
       <p>Find your favorite songs done by different artists.</p>
       <h3>Enter the song and artist.</h3>
       <form class="input-group input-group-rounded">
-        <input class="input-group-field" type="search" value="Never Gonna Give You Up">
+        <input id="searchText" class="input-group-field" type="search" value="Never Gonna Give You Up">
         <fieldset class="input-group-button">
-          <button class="button">Search</button>
+          <button id="searchButton" class="button">Search</button>
         </fieldset>
       </form>
     </section>

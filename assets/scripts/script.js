@@ -2,6 +2,7 @@
 
 var searchButton = document.querySelector("#searchButton");
 var searchText = document.querySelector("#searchText");
+var clearHistory = document.querySelector("#clearHistory")
 
 var searchedItem;
 var userSearches;
@@ -25,19 +26,51 @@ searchButton.addEventListener("click", function(event) {
     event.preventDefault();
     
     searches.push(searchText.value);
-    searchText.value = "";
+    // var searches = [search text];
+    // searchText.value = "";
 
     localStorage.setItem("search", JSON.stringify(searches));
-    
+    searches = localStorage.getItem('search');
+    showSearches(searches);
     // addSearchHistory();
     // findCover();
 })
 
-// function init () {
-//     var searchesList = JSON.parse(localStorage.getItem("search"));
-//     if (searchesList !== null) {
-//         searches = searchesList;
-//     }
+function showSearches() {
+  for (var i = 0; i < searches.length; i++) {
+    // clearButtons();
+  if (clearHistory.addEventListener("")) {
+      
+
+    } else {
+      var element = searches[i];
+
+      var listContainer = document.getElementById("listItem");
+      var listItem = document.createElement("button");
+
+      listItem.setAttribute("id", i);
+      listItem.textContent = element;
+      listContainer.appendChild(listItem);
+    }
+  }
+}
+
+
+clearHistory.addEventListener("click", clearButtons());
+
+function init () {
+    var searchesList = JSON.parse(localStorage.getItem("search"));
+    if (searchesList !== null) {
+        searches = searchesList;
+    }
+}
+
+// function clearButtons(event) {
+//   event.preventDefault();
+//   searches = [];
+//   var listContainer = document.getElementById("listItem");
+//   listContainer.innerHTML = "";
+
 // }
 
 // function addSearchHistory() {
@@ -56,39 +89,39 @@ init();
 /* Jason's area */
 
 /* Jackson's area */
-var searchInput = document.getElementById("search-input");
-var searchButton = document.getElementById("search-button");
-var resultsContainer = document.getElementById("results-container");
+// var searchInput = document.getElementById("search-input");
+// var searchButton = document.getElementById("search-button");
+// var resultsContainer = document.getElementById("results-container");
 
-searchButton.addEventListener("click", performSearch);
+// searchButton.addEventListener("click", performSearch);
 
-function performSearch(event) {
-  event.preventDefault();
-  var searchTerm = searchInput.value;
-  console.log(searchTerm);
-  var apiUrl = `https://api.publicapis.org/entries=${encodeURIComponent(searchTerm)}`;
+// function performSearch(event) {
+//   event.preventDefault();
+//   var searchTerm = searchInput.value;
+//   console.log(searchTerm);
+//   var apiUrl = `https://api.publicapis.org/entries=${encodeURIComponent(searchTerm)}`;
 
-  fetch(apiUrl, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => displayResults(data))
-    .catch((error) => console.log(error));
+//   fetch(apiUrl, {
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   })
+//     .then((response) => response.json())
+//     .then((data) => displayResults(data))
+//     .catch((error) => console.log(error));
 
-  console.log(apiUrl);
-}
+//   console.log(apiUrl);
+// }
 
-function displayResults(data) {
-  resultsContainer.innerHTML = "";
+// function displayResults(data) {
+//   resultsContainer.innerHTML = "";
 
-  data.forEach((result) => {
-    var resultItem = document.createElement("div");
-    resultItem.textContent = result.title;
-    resultsContainer.appendChild(resultItem);
-  });
-}
+//   data.forEach((result) => {
+//     var resultItem = document.createElement("div");
+//     resultItem.textContent = result.title;
+//     resultsContainer.appendChild(resultItem);
+//   });
+// }
 
 /* Jackson's area */
 

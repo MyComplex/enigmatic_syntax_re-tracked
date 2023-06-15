@@ -54,6 +54,13 @@ p {
   justify-content: center;
 }
 
+#listItem {
+  display: block;
+  color: white;
+  padding: 30px;
+  margin-bottom: -30px;
+}
+
 h3 {
   font-family: 'Play', sans-serif;
   text-shadow: 1px 1px 2px #565a5c;

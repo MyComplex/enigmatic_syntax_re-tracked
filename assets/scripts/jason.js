@@ -33,12 +33,14 @@ searchButton.addEventListener("click", function(event) {
     // findCover();
 })
 
-// function init () {
-//     var searchesList = JSON.parse(localStorage.getItem("search"));
-//     if (searchesList !== null) {
-//         searches = searchesList;
-//     }
-// }
+function init () {
+    var searchesList = JSON.parse(localStorage.getItem("search"));
+    if (searchesList !== null) {
+        searches = searchesList;
+    }
+}
+
+// fish the lyrics out of the html of the api
 
 // function addSearchHistory() {
 //     // save to local storage
