@@ -418,22 +418,45 @@
 // /* Lidell's area */
 
 /* Jesus' area */
-function payloadParsing() {
-    var localJSON = './assets/json/topUS.json';
-    fetch(localJSON)
-        .then((response) => response.json())
-        .then((data) => getLyrics(data))
-        // .then((data) => console.log(data))
-}
-/* Jesus' area */
 
-function getLyrics (data){
-    // var parsedData = data;
-    var lyricsLink = data.message.body.tracklist[0].track.track_share_url.value;
-    // var lyricsLink = data;
-    $.get(lyricsLink, function(html) {
-      alert($(html).find(".lyrics__content__ok").text());  
-    console.log(data.message.body.tracklist[0].track.track_share_url);
-    }
-)
-}
+// var lyrics;
+// function payloadParsing() {
+//   var localJSON = './assets/json/topUS.json';
+//   fetch(localJSON)
+//     .then((response) => response.json())
+//     .then((data) => getLyrics(data.message.body.track_list[0].track.track_share_url))
+// .then((data) => handleData(data.message.body.track_list[0].track.track_share_url))
+// }
+
+// console.log(lyrics);
+
+// function getLyrics(/*data*/) {
+  // var lyricsLink = data;
+  // var lyricsUrl = "https://www.musixmatch.com/lyrics/Luke-Combs/Track-14?utm_source=application&utm_campaign=api&utm_medium="
+  // $.get(lyricsUrl, function (html) {
+    // alert($(html).find(".lyrics__content__ok").text());
+// console.log(data.message.body.track_list[0].track.track_share_url);
+// }
+// )
+// console.log(data.message.body.track_list[0].track.track_share_url)
+// }
+
+// function handleData(data){
+// lyrics = data;
+// console.log(lyrics.message.body.track_list[0].track.track_share_url);
+// console.log
+// }
+
+// function storeResponse(data){
+//   lyrics = data.message.body.track_list[0].track.track_share_url;
+//   console.log(lyrics.message.body.track_list[0].track.track_share_url);
+// }
+
+// function extractLyrics() {
+  // var lyricsUrl = "https://www.musixmatch.com/lyrics/Luke-Combs/Track-14?utm_source=application&utm_campaign=api&utm_medium="
+
+    // fetch(lyricsUrl)
+      // .then((response) => response.text())
+      // .then((data) => console.log(data))
+// }
+/* Jesus' area */
