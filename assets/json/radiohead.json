@@ -1,0 +1,950 @@
+{
+    "message": {
+        "header": {
+            "status_code": 200,
+            "execute_time": 0.14397287368774,
+            "available": 112
+        },
+        "body": {
+            "artist_list": [
+                {
+                    "artist": {
+                        "artist_id": 406133,
+                        "artist_name": "Vitamin String Quartet",
+                        "artist_name_translation_list": [],
+                        "artist_comment": "",
+                        "artist_country": "US",
+                        "artist_alias_list": [
+                            {
+                                "artist_alias": "String Quartet Tribute"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to The Rolling Stones"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute To Jimi Hendrix"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Iron Maiden"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Sarah McLachlan"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to No Doubt"
+                            },
+                            {
+                                "artist_alias": "String Tribute"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Staind"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Radiohead"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Bj\u00f6rk"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Marilyn Manson"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Pink Floyd"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to The Pixies"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to 3 Doors Down"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Celine Dion"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Peter Gabriel"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute To Slayer"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Korn"
+                            },
+                            {
+                                "artist_alias": "The Angry String Orchestra"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute To Black Sabbath"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Nirvana"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Creed"
+                            },
+                            {
+                                "artist_alias": "The Vitamin String Quartet"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Oasis"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to The Cure"
+                            },
+                            {
+                                "artist_alias": "The String Quartet Tribute to Massive Attack"
+                            },
+                            {
+                                "artist_alias": "The Tallywood Strings"
+                            }
+                        ],
+                        "artist_rating": 56,
+                        "artist_twitter_url": "",
+                        "artist_credits": {
+                            "artist_list": []
+                        },
+                        "restricted": 0,
+                        "updated_time": "2015-12-01T15:20:18Z",
+                        "begin_date_year": "1999",
+                        "begin_date": "1999-00-00",
+                        "end_date_year": "",
+                        "end_date": "0000-00-00"
+                    }
+                },
+                {
+                    "artist": {
+                        "artist_id": 24395124,
+                        "artist_name": "Radiohead feat. Sparklehorse",
+                        "artist_name_translation_list": [],
+                        "artist_comment": "",
+                        "artist_country": "",
+                        "artist_alias_list": [],
+                        "artist_rating": 7,
+                        "artist_twitter_url": "",
+                        "artist_credits": {
+                            "artist_list": [
+                                {
+                                    "artist": {
+                                        "artist_id": 54437818,
+                                        "artist_name": "Radiohead",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u308c\u3067\u3043\u304a\u3078\u3063\u3069"
+                                            },
+                                            {
+                                                "artist_alias": "r\/head"
+                                            },
+                                            {
+                                                "artist_alias": "\u30ec\u30c7\u30a3\u30aa\u30d8\u30c3\u30c9"
+                                            },
+                                            {
+                                                "artist_alias": "Radio head"
+                                            },
+                                            {
+                                                "artist_alias": "Radiohead & Thom Yorke"
+                                            },
+                                            {
+                                                "artist_alias": "Toilethead"
+                                            }
+                                        ],
+                                        "artist_rating": 82,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/radiohead",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2022-08-05T15:58:27Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                },
+                                {
+                                    "artist": {
+                                        "artist_id": 10507,
+                                        "artist_name": "Sparklehorse",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "US",
+                                        "artist_alias_list": [],
+                                        "artist_rating": 41,
+                                        "artist_twitter_url": "",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2013-11-05T11:25:09Z",
+                                        "begin_date_year": "1995",
+                                        "begin_date": "1995-00-00",
+                                        "end_date_year": "2010",
+                                        "end_date": "2010-00-00"
+                                    }
+                                }
+                            ]
+                        },
+                        "restricted": 0,
+                        "updated_time": "2013-06-26T18:50:11Z",
+                        "begin_date_year": "",
+                        "begin_date": "0000-00-00",
+                        "end_date_year": "",
+                        "end_date": "0000-00-00"
+                    }
+                },
+                {
+                    "artist": {
+                        "artist_id": 50051308,
+                        "artist_name": "Thom Yorke feat. Radiohead",
+                        "artist_name_translation_list": [],
+                        "artist_comment": "",
+                        "artist_country": "",
+                        "artist_alias_list": [],
+                        "artist_rating": 16,
+                        "artist_twitter_url": "",
+                        "artist_credits": {
+                            "artist_list": [
+                                {
+                                    "artist": {
+                                        "artist_id": 36886,
+                                        "artist_name": "Thom Yorke",
+                                        "artist_name_translation_list": [
+                                            {
+                                                "artist_name_translation": {
+                                                    "language": "AF",
+                                                    "translation": "Yorke Thomas Edward"
+                                                }
+                                            }
+                                        ],
+                                        "artist_comment": "",
+                                        "artist_country": "GB",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "Yorke Thomas Edward"
+                                            },
+                                            {
+                                                "artist_alias": "\u30c8\u30e0\u30e8\u30fc\u30af"
+                                            },
+                                            {
+                                                "artist_alias": "Thomas Yorke"
+                                            },
+                                            {
+                                                "artist_alias": "Thomas Edward Yorke"
+                                            }
+                                        ],
+                                        "artist_rating": 52,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/thomyorke",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2022-08-12T11:32:42Z",
+                                        "begin_date_year": "1968",
+                                        "begin_date": "1968-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                },
+                                {
+                                    "artist": {
+                                        "artist_id": 54437818,
+                                        "artist_name": "Radiohead",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u308c\u3067\u3043\u304a\u3078\u3063\u3069"
+                                            },
+                                            {
+                                                "artist_alias": "r\/head"
+                                            },
+                                            {
+                                                "artist_alias": "\u30ec\u30c7\u30a3\u30aa\u30d8\u30c3\u30c9"
+                                            },
+                                            {
+                                                "artist_alias": "Radio head"
+                                            },
+                                            {
+                                                "artist_alias": "Radiohead & Thom Yorke"
+                                            },
+                                            {
+                                                "artist_alias": "Toilethead"
+                                            }
+                                        ],
+                                        "artist_rating": 82,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/radiohead",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2022-08-05T15:58:27Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                }
+                            ]
+                        },
+                        "restricted": 0,
+                        "updated_time": "2023-02-14T12:40:58Z",
+                        "begin_date_year": "",
+                        "begin_date": "0000-00-00",
+                        "end_date_year": "",
+                        "end_date": "0000-00-00"
+                    }
+                },
+                {
+                    "artist": {
+                        "artist_id": 54437841,
+                        "artist_name": "Thom Yorke feat. Radiohead",
+                        "artist_name_translation_list": [],
+                        "artist_comment": "",
+                        "artist_country": "",
+                        "artist_alias_list": [],
+                        "artist_rating": 14,
+                        "artist_twitter_url": "",
+                        "artist_credits": {
+                            "artist_list": [
+                                {
+                                    "artist": {
+                                        "artist_id": 36886,
+                                        "artist_name": "Thom Yorke",
+                                        "artist_name_translation_list": [
+                                            {
+                                                "artist_name_translation": {
+                                                    "language": "AF",
+                                                    "translation": "Yorke Thomas Edward"
+                                                }
+                                            }
+                                        ],
+                                        "artist_comment": "",
+                                        "artist_country": "GB",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "Yorke Thomas Edward"
+                                            },
+                                            {
+                                                "artist_alias": "\u30c8\u30e0\u30e8\u30fc\u30af"
+                                            },
+                                            {
+                                                "artist_alias": "Thomas Yorke"
+                                            },
+                                            {
+                                                "artist_alias": "Thomas Edward Yorke"
+                                            }
+                                        ],
+                                        "artist_rating": 52,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/thomyorke",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2022-08-12T11:32:42Z",
+                                        "begin_date_year": "1968",
+                                        "begin_date": "1968-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                },
+                                {
+                                    "artist": {
+                                        "artist_id": 54437818,
+                                        "artist_name": "Radiohead",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u308c\u3067\u3043\u304a\u3078\u3063\u3069"
+                                            },
+                                            {
+                                                "artist_alias": "r\/head"
+                                            },
+                                            {
+                                                "artist_alias": "\u30ec\u30c7\u30a3\u30aa\u30d8\u30c3\u30c9"
+                                            },
+                                            {
+                                                "artist_alias": "Radio head"
+                                            },
+                                            {
+                                                "artist_alias": "Radiohead & Thom Yorke"
+                                            },
+                                            {
+                                                "artist_alias": "Toilethead"
+                                            }
+                                        ],
+                                        "artist_rating": 82,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/radiohead",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2022-08-05T15:58:27Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                }
+                            ]
+                        },
+                        "restricted": 0,
+                        "updated_time": "2023-02-14T12:11:18Z",
+                        "begin_date_year": "",
+                        "begin_date": "0000-00-00",
+                        "end_date_year": "",
+                        "end_date": "0000-00-00"
+                    }
+                },
+                {
+                    "artist": {
+                        "artist_id": 24439917,
+                        "artist_name": "El Lele De Los Van Van, Radiohead & Rhythms del Mundo",
+                        "artist_name_translation_list": [],
+                        "artist_comment": "",
+                        "artist_country": "",
+                        "artist_alias_list": [],
+                        "artist_rating": 6,
+                        "artist_twitter_url": "",
+                        "artist_credits": {
+                            "artist_list": [
+                                {
+                                    "artist": {
+                                        "artist_id": 263344,
+                                        "artist_name": "El Lele de los Van Van",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "",
+                                        "artist_alias_list": [],
+                                        "artist_rating": 7,
+                                        "artist_twitter_url": "",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2013-06-25T18:48:35Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                },
+                                {
+                                    "artist": {
+                                        "artist_id": 54437818,
+                                        "artist_name": "Radiohead",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u308c\u3067\u3043\u304a\u3078\u3063\u3069"
+                                            },
+                                            {
+                                                "artist_alias": "r\/head"
+                                            },
+                                            {
+                                                "artist_alias": "\u30ec\u30c7\u30a3\u30aa\u30d8\u30c3\u30c9"
+                                            },
+                                            {
+                                                "artist_alias": "Radio head"
+                                            },
+                                            {
+                                                "artist_alias": "Radiohead & Thom Yorke"
+                                            },
+                                            {
+                                                "artist_alias": "Toilethead"
+                                            }
+                                        ],
+                                        "artist_rating": 82,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/radiohead",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2022-08-05T15:58:27Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                },
+                                {
+                                    "artist": {
+                                        "artist_id": 411079,
+                                        "artist_name": "Rhythms del Mundo",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u30ea\u30ba\u30e0\u30c7\u30eb\u30e0\u30f3\u30c9"
+                                            },
+                                            {
+                                                "artist_alias": "Rhythms Del Mundo"
+                                            }
+                                        ],
+                                        "artist_rating": 26,
+                                        "artist_twitter_url": "",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2015-12-09T18:35:23Z",
+                                        "begin_date_year": "2005",
+                                        "begin_date": "2005-01-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                }
+                            ]
+                        },
+                        "restricted": 0,
+                        "updated_time": "2013-09-13T19:53:07Z",
+                        "begin_date_year": "",
+                        "begin_date": "0000-00-00",
+                        "end_date_year": "",
+                        "end_date": "0000-00-00"
+                    }
+                },
+                {
+                    "artist": {
+                        "artist_id": 13804371,
+                        "artist_name": "Aquasky vs. Radiohead",
+                        "artist_name_translation_list": [],
+                        "artist_comment": "",
+                        "artist_country": "",
+                        "artist_alias_list": [],
+                        "artist_rating": 6,
+                        "artist_twitter_url": "",
+                        "artist_credits": {
+                            "artist_list": [
+                                {
+                                    "artist": {
+                                        "artist_id": 5848,
+                                        "artist_name": "Aquasky",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "GB",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "Aqua Sky"
+                                            }
+                                        ],
+                                        "artist_rating": 13,
+                                        "artist_twitter_url": "",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2013-11-05T11:25:05Z",
+                                        "begin_date_year": "1995",
+                                        "begin_date": "1995-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                },
+                                {
+                                    "artist": {
+                                        "artist_id": 54437818,
+                                        "artist_name": "Radiohead",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u308c\u3067\u3043\u304a\u3078\u3063\u3069"
+                                            },
+                                            {
+                                                "artist_alias": "r\/head"
+                                            },
+                                            {
+                                                "artist_alias": "\u30ec\u30c7\u30a3\u30aa\u30d8\u30c3\u30c9"
+                                            },
+                                            {
+                                                "artist_alias": "Radio head"
+                                            },
+                                            {
+                                                "artist_alias": "Radiohead & Thom Yorke"
+                                            },
+                                            {
+                                                "artist_alias": "Toilethead"
+                                            }
+                                        ],
+                                        "artist_rating": 82,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/radiohead",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2022-08-05T15:58:27Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                }
+                            ]
+                        },
+                        "restricted": 0,
+                        "updated_time": "2014-06-18T01:04:44Z",
+                        "begin_date_year": "",
+                        "begin_date": "0000-00-00",
+                        "end_date_year": "",
+                        "end_date": "0000-00-00"
+                    }
+                },
+                {
+                    "artist": {
+                        "artist_id": 54437857,
+                        "artist_name": "Radiohead feat. Nathan Fake",
+                        "artist_name_translation_list": [],
+                        "artist_comment": "",
+                        "artist_country": "",
+                        "artist_alias_list": [],
+                        "artist_rating": 9,
+                        "artist_twitter_url": "",
+                        "artist_credits": {
+                            "artist_list": [
+                                {
+                                    "artist": {
+                                        "artist_id": 54437818,
+                                        "artist_name": "Radiohead",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u308c\u3067\u3043\u304a\u3078\u3063\u3069"
+                                            },
+                                            {
+                                                "artist_alias": "r\/head"
+                                            },
+                                            {
+                                                "artist_alias": "\u30ec\u30c7\u30a3\u30aa\u30d8\u30c3\u30c9"
+                                            },
+                                            {
+                                                "artist_alias": "Radio head"
+                                            },
+                                            {
+                                                "artist_alias": "Radiohead & Thom Yorke"
+                                            },
+                                            {
+                                                "artist_alias": "Toilethead"
+                                            }
+                                        ],
+                                        "artist_rating": 82,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/radiohead",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2022-08-05T15:58:27Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                },
+                                {
+                                    "artist": {
+                                        "artist_id": 81769,
+                                        "artist_name": "Nathan Fake",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "GB",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u30cd\u30a4\u30b5\u30f3\u30fb\u30d5\u30a7\u30a4\u30af"
+                                            }
+                                        ],
+                                        "artist_rating": 23,
+                                        "artist_twitter_url": "",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2016-07-01T10:28:25Z",
+                                        "begin_date_year": "1983",
+                                        "begin_date": "1983-03-01",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                }
+                            ]
+                        },
+                        "restricted": 0,
+                        "updated_time": "2023-02-14T12:11:18Z",
+                        "begin_date_year": "",
+                        "begin_date": "0000-00-00",
+                        "end_date_year": "",
+                        "end_date": "0000-00-00"
+                    }
+                },
+                {
+                    "artist": {
+                        "artist_id": 13852297,
+                        "artist_name": "Plan B feat. Radiohead",
+                        "artist_name_translation_list": [],
+                        "artist_comment": "",
+                        "artist_country": "",
+                        "artist_alias_list": [],
+                        "artist_rating": 4,
+                        "artist_twitter_url": "",
+                        "artist_credits": {
+                            "artist_list": [
+                                {
+                                    "artist": {
+                                        "artist_id": 241939,
+                                        "artist_name": "Plan B",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "GB",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u30d7\u30e9\u30f3\u30d3\u30fc"
+                                            }
+                                        ],
+                                        "artist_rating": 17,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/4PLanB",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2013-11-05T11:27:49Z",
+                                        "begin_date_year": "1983",
+                                        "begin_date": "1983-10-22",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                },
+                                {
+                                    "artist": {
+                                        "artist_id": 54437818,
+                                        "artist_name": "Radiohead",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u308c\u3067\u3043\u304a\u3078\u3063\u3069"
+                                            },
+                                            {
+                                                "artist_alias": "r\/head"
+                                            },
+                                            {
+                                                "artist_alias": "\u30ec\u30c7\u30a3\u30aa\u30d8\u30c3\u30c9"
+                                            },
+                                            {
+                                                "artist_alias": "Radio head"
+                                            },
+                                            {
+                                                "artist_alias": "Radiohead & Thom Yorke"
+                                            },
+                                            {
+                                                "artist_alias": "Toilethead"
+                                            }
+                                        ],
+                                        "artist_rating": 82,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/radiohead",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2022-08-05T15:58:27Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                }
+                            ]
+                        },
+                        "restricted": 0,
+                        "updated_time": "2014-04-17T11:30:40Z",
+                        "begin_date_year": "",
+                        "begin_date": "0000-00-00",
+                        "end_date_year": "",
+                        "end_date": "0000-00-00"
+                    }
+                },
+                {
+                    "artist": {
+                        "artist_id": 48719587,
+                        "artist_name": "Radiohead feat. Jacques Greene",
+                        "artist_name_translation_list": [],
+                        "artist_comment": "",
+                        "artist_country": "",
+                        "artist_alias_list": [],
+                        "artist_rating": 6,
+                        "artist_twitter_url": "",
+                        "artist_credits": {
+                            "artist_list": [
+                                {
+                                    "artist": {
+                                        "artist_id": 54437818,
+                                        "artist_name": "Radiohead",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u308c\u3067\u3043\u304a\u3078\u3063\u3069"
+                                            },
+                                            {
+                                                "artist_alias": "r\/head"
+                                            },
+                                            {
+                                                "artist_alias": "\u30ec\u30c7\u30a3\u30aa\u30d8\u30c3\u30c9"
+                                            },
+                                            {
+                                                "artist_alias": "Radio head"
+                                            },
+                                            {
+                                                "artist_alias": "Radiohead & Thom Yorke"
+                                            },
+                                            {
+                                                "artist_alias": "Toilethead"
+                                            }
+                                        ],
+                                        "artist_rating": 82,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/radiohead",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2022-08-05T15:58:27Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                },
+                                {
+                                    "artist": {
+                                        "artist_id": 13045538,
+                                        "artist_name": "Jacques Greene",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "CA",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "JacquesGreene"
+                                            }
+                                        ],
+                                        "artist_rating": 22,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/jacquesgreene",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2013-11-05T11:29:17Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                }
+                            ]
+                        },
+                        "restricted": 0,
+                        "updated_time": "2023-02-14T15:40:08Z",
+                        "begin_date_year": "",
+                        "begin_date": "0000-00-00",
+                        "end_date_year": "",
+                        "end_date": "0000-00-00"
+                    }
+                },
+                {
+                    "artist": {
+                        "artist_id": 48719594,
+                        "artist_name": "Radiohead feat. Illum Sphere",
+                        "artist_name_translation_list": [],
+                        "artist_comment": "",
+                        "artist_country": "",
+                        "artist_alias_list": [],
+                        "artist_rating": 6,
+                        "artist_twitter_url": "",
+                        "artist_credits": {
+                            "artist_list": [
+                                {
+                                    "artist": {
+                                        "artist_id": 54437818,
+                                        "artist_name": "Radiohead",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "",
+                                        "artist_alias_list": [
+                                            {
+                                                "artist_alias": "\u308c\u3067\u3043\u304a\u3078\u3063\u3069"
+                                            },
+                                            {
+                                                "artist_alias": "r\/head"
+                                            },
+                                            {
+                                                "artist_alias": "\u30ec\u30c7\u30a3\u30aa\u30d8\u30c3\u30c9"
+                                            },
+                                            {
+                                                "artist_alias": "Radio head"
+                                            },
+                                            {
+                                                "artist_alias": "Radiohead & Thom Yorke"
+                                            },
+                                            {
+                                                "artist_alias": "Toilethead"
+                                            }
+                                        ],
+                                        "artist_rating": 82,
+                                        "artist_twitter_url": "https:\/\/twitter.com\/radiohead",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2022-08-05T15:58:27Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                },
+                                {
+                                    "artist": {
+                                        "artist_id": 12335233,
+                                        "artist_name": "Illum Sphere",
+                                        "artist_name_translation_list": [],
+                                        "artist_comment": "",
+                                        "artist_country": "GB",
+                                        "artist_alias_list": [],
+                                        "artist_rating": 9,
+                                        "artist_twitter_url": "",
+                                        "artist_credits": {
+                                            "artist_list": []
+                                        },
+                                        "restricted": 0,
+                                        "updated_time": "2015-12-20T18:31:59Z",
+                                        "begin_date_year": "",
+                                        "begin_date": "0000-00-00",
+                                        "end_date_year": "",
+                                        "end_date": "0000-00-00"
+                                    }
+                                }
+                            ]
+                        },
+                        "restricted": 0,
+                        "updated_time": "2023-02-14T15:40:08Z",
+                        "begin_date_year": "",
+                        "begin_date": "0000-00-00",
+                        "end_date_year": "",
+                        "end_date": "0000-00-00"
+                    }
+                }
+            ]
+        }
+    }
+}

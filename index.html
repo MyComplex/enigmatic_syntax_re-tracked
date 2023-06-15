@@ -19,12 +19,12 @@
 
   <header class="top-content-section">
     <form class="top-bar">
-      <fieldset class="top-bar-left">
-        <legend class="menu-text">Previous Tracks</legend>  
-          <button>Song One</button>
-          <button>Song Two</button>
-          <button>Song Three</button>
-          <button>Song Four</button>
+      <fieldset id="history-container" class="top-bar-left">
+        <legend class="menu-text">Previous Tracks</legend>
+        <button>Song One</button>
+        <button>Song Two</button>
+        <button>Song Three</button>
+        <button>Song Four</button>
       </fieldset>
     </form>
   </header>
@@ -35,7 +35,7 @@
       <p>Find your favorite songs done by different artists.</p>
       <h3>Enter the song and artist.</h3>
       <form class="input-group input-group-rounded">
-        <input id="searchText" class="input-group-field" type="search" value="Never Gonna Give You Up">
+        <input id="searchText" class="input-group-field" type="search">
         <fieldset class="input-group-button">
           <button id="searchButton" class="button">Search</button>
         </fieldset>
@@ -45,7 +45,7 @@
 
   <footer class="social-footer">
     <section class="social-footer-left">
-      <i class="fa fa-album-collection" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+      <img src="./assets/img/vinyl-record-svgrepo-com.svg" alt="vinyl record icon" class="social-footer-logo">
     </section>
     <nav class="social-footer-icons">
       <ul class="menu simple">
@@ -55,7 +55,9 @@
         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
       </ul>
     </nav>
-    <h6>©2023 Enigmatic Syntax</h6>
+    <section class="social-footer-right">
+      <h6>©2023 Enigmatic Syntax</h6>
+    </section>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.8/dayjs.min.js"></script>
