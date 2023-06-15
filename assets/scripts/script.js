@@ -26,8 +26,7 @@ searchButton.addEventListener("click", function(event) {
     event.preventDefault();
     
     searches.push(searchText.value);
-    // var searches = [search text];
-    // searchText.value = "";
+    searchText.value = "";
 
     localStorage.setItem("search", JSON.stringify(searches));
     searches = localStorage.getItem('search');
@@ -35,28 +34,24 @@ searchButton.addEventListener("click", function(event) {
     // addSearchHistory();
     // findCover();
 })
+clearHistory.addEventListener("click", function(event) {localStorage.clear()})
 
 function showSearches() {
   for (var i = 0; i < searches.length; i++) {
-    // clearButtons();
-  if (clearHistory.addEventListener("")) {
-      
+    var element = searches[i];
 
-    } else {
-      var element = searches[i];
+    var listContainer = document.getElementById("listItem");
+    var listItem = document.createElement("li");
 
-      var listContainer = document.getElementById("listItem");
-      var listItem = document.createElement("button");
-
-      listItem.setAttribute("id", i);
-      listItem.textContent = element;
-      listContainer.appendChild(listItem);
-    }
+    listItem.setAttribute("id", i);
+    listItem.textContent = element;
+    listContainer.appendChild(listItem);
   }
 }
 
 
-clearHistory.addEventListener("click", clearButtons());
+
+// clearHistory.addEventListener("click", clearButtons());
 
 function init () {
     var searchesList = JSON.parse(localStorage.getItem("search"));
