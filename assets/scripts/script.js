@@ -31,6 +31,7 @@ function performSearch(trackTitle) {
 };
 
 function displayTrackSearchResults(trackSearchData) {
+  console.log(trackSearchData.message.body.track_list);
   trackSearchDisplay.style.display = 'none';
 
   trackSearchResultsContainer.innerHTML = "";
@@ -109,6 +110,7 @@ function displayTrackSearchResults(trackSearchData) {
     trackTitlesContainer.appendChild(trackTitlesTrack);
     trackSearchResultsItem.appendChild(trackTitlesContainer);
 
+    trackSearchResultsContainer.appendChild(trackSearchResultsItem);
   }
 
   // '<h4 id="album-artist">AC/DC</h4>' +
@@ -127,9 +129,8 @@ function displayTrackSearchResults(trackSearchData) {
   //   resultsContainer.appendChild(resultItem);
   // });
 
-  trackSearchResultsContainer.appendChild(trackSearchResultsItem);
 
-  trackSearchResultsContainer.style.display = 'block';
+  trackSearchResultsContainer.style.display = 'flex';
 }
 
 /* Code to run */
