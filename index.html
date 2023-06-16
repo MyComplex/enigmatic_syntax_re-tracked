@@ -23,30 +23,32 @@
         </nav>
       </section>
     </header>
-    <article class="middle-content-section">
+    <article id="main-container" class="middle-content-section">
       <h1 class="hero-title">re:TRACKED</h1>
       <form class="input-group input-group-rounded">
-        <input id="searchText" class="input-group-field" type="search">
-        <div class="input-group-button">
-          <input id="searchButton" type="submit" class="button secondary" value="Search">
-        </div>
+        <input id="search-text" class="input-group-field" type="search">
+        <section class="input-group-button">
+          <input id="search-button" type="submit" class="button secondary" value="Search">
+        </section>
       </form>
     </article>
+    <section id="results-container">
+    </section>
     <footer class="social-footer">
       <div class="social-footer-icons">
         <ul class="menu simple">
+          <li><i class="fa-solid fa-play fa-2xl"></i></li>
           <li><i class="fa-solid fa-backward fa-2xl"></i></li>
           <li><i class="fa-solid fa-forward fa-2xl"></i></li>
-          <li><i class="fa-solid fa-stop fa-2xl"></i></li>
-          <li><i class="fa-solid fa-play fa-2xl"></i></li>
+          <li><i class="fa-solid fa-eject fa-2xl"></i></li>
         </ul>
       </div>
     </footer>
     <div id="myModal" class="modal">
-        <div class="modal-content">
-            <p id="modalText"></p>
-            <span class="close">&times;</span>
-        </div>
+      <div class="modal-content">
+        <p id="modalText"></p>
+        <span class="close">&times;</span>
+      </div>
     </div>
   </main>
   <script src="http://bucky-cors-proxy.herokuapp.com/fetch.js"></script>

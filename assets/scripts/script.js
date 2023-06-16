@@ -1,116 +1,114 @@
 /* Code to run */
-/*JG*/
-var searchButton = document.querySelector("#searchButton");
-var searchText = document.querySelector("#searchText");
+/* GLOBAL VARIABLES */
+var apiKey = '1bea274e43466310a83604d5c9dffd24';
+var historyContainer = document.getElementById('history-container');
+var trackSearchDisplay = document.getElementById('main-container');
+var searchText = document.getElementById('search-text');
+var searchButton = document.getElementById('search-button');
+var trackSearchResultsContainer = document.getElementById('results-container');
 
-// console.log(searchText.value);
+var searches = localStorage.getItem('searches');
+searches = (searches) ? JSON.parse(searches) : [];
 
-var searchedItem;
-var userSearches;
-
-var searches = [];
-
-searchButton.addEventListener("click", function (event) {
+/* INITIATE SEARCH */
+searchButton.addEventListener('click', function (event) {
   event.preventDefault();
+  var trackTitle = searchText.value;
+  performSearch(trackTitle);
 
-  searches.push(searchText.value);
-  // searchText.value = "";
+  // searches.push(searchText.value);
 
-  localStorage.setItem("search", JSON.stringify(searches));
-  performSearch(searchText.value);
-})
+  // localStorage.setItem("searches", JSON.stringify(searches));
+});
 
-function init() {
-  var searchesList = JSON.parse(localStorage.getItem("search"));
-  if (searchesList !== null) {
-    searches = searchesList;
-  }
-}
+function performSearch(trackTitle) {
+  var trackSearchUrl = `https://api.musixmatch.com/ws/1.1/track.search?q_track=${encodeURIComponent(trackTitle)}&f_has_lyrics=1&f_is_instrumental=0&s_track_rating=desc&apikey=${apiKey}`;
 
-init();
-/*JG*/
-/*JH*/
-function performSearch(event) {
-  // event.preventDefault();
-  var searchTerm = searchInput.value;
-  console.log(searchTerm);
-  var apiUrl = `https://api.musixmatch.com/ws/1.1/track.search?q_track=${encodeURIComponent(searchTerm)}&apikey=1bea274e43466310a83604d5c9dffd24`;
-
-  fetch(apiUrl)
-    .then((response) => response.json())
-    .then((data) => displayResults(data))
+  fetch(trackSearchUrl)
+    .then((trackSearchResponse) => trackSearchResponse.json())
+    .then((trackSearchData) => displayResults(trackSearchData))
     .catch((error) => console.log(error));
+};
 
-  // console.log(apiUrl);
+function displayTrackSearchResults(trackSearchData) {
+  trackSearchDisplay.style.display = 'none';
+
+  trackSearchResultsContainer.innerHTML = "";
+  
+  for (let i = 0; i < trackSearchData.message.body.track_list.length; i++) {
+    var trackIndex = trackSearchData.message.body.track_list[i];
+    var trackId = trackIndex.track.track_id;
+    var trackName = trackIndex.track.track_name;
+    var trackAlbumId = trackIndex.track.album_id;
+    var trackAlbumName = trackIndex.track.album_name;
+    var trackArtistId = trackIndex.track.artist_id;
+    var trackArtistName = trackIndex.track.artist_name;
+
+    var trackSearchResultsItem = document.createElement('div');
+    trackSearchResultsItem.setAttribute('id', 'track-'+i);
+    trackSearchResultsItem.setAttribute('class', 'card-user-container');
+    
+    var trackSearchResultsItemAlbumArtContainer = document.createElement('div');
+    trackSearchResultsItemAlbumArtContainer.setAttribute('id', 'album-art-container-'+i);
+    trackSearchResultsItemAlbumArtContainer.setAttribute('class', 'card-user-avatar');
+    
+    var trackSearchResultsItemAlbumArt = document.createElement('img');
+    trackSearchResultsItemAlbumArt.setAttribute('id', 'album-art-'+i);
+    trackSearchResultsItemAlbumArt.setAttribute('src', 'https://placehold.it/350x350');
+    trackSearchResultsItemAlbumArt.setAttribute('alt', 'Track '+i+' album cover art.');
+    trackSearchResultsItemAlbumArt.setAttribute('class', 'user-image');
+    
+    var trackSearchResultsItemLinksContainer = document.createElement('div');
+    trackSearchResultsItemLinksContainer.setAttribute('id', 'album-links-'+i);
+    trackSearchResultsItemLinksContainer.setAttribute('class', 'card-user-social');
+    
+    var trackSearchResultsItemLinksList = document.createElement('ul');
+    trackSearchResultsItemLinksList.setAttribute('id', 'album-links-list-'+i);
+    trackSearchResultsItemLinksList.setAttribute('class', 'menu');
+    
+    var trackSearchResultsItemLinksList = document.createElement('ul');
+    trackSearchResultsItemLinksList.setAttribute('id', 'album-links-list-'+i);
+    trackSearchResultsItemLinksList.setAttribute('class', 'menu');
+    
+    var trackSearchResultsItemLinksListLyrics = document.createElement('li');
+    trackSearchResultsItemLinksListLyrics.setAttribute('id', 'track-lyrics-'+i);
+    trackSearchResultsItemLinksListLyrics.setAttribute('class', 'fa-solid fa-microphone-lines fa-2xl');
+    
 }
 
-function displayResults(data) {
-  resultsContainer.innerHTML = "";
+  var trackSearchItemBlock = '<div class="card-user-avatar">' +
+    '<img id="album-art" src="https://placehold.it/350x350" alt="Album Art" class="user-image">' +
+    '</div>' +
+    '<div class="card-user-social">' +
+    '<ul class="menu">' +
+    '<li class="fa-solid fa-microphone-lines fa-2xl"></li>' +
+    '<li class="fa-solid fa-file-audio"></li>' +
+    '<li class="fa-solid fa-ticket"></li>' +
+    '<li class="fa-solid fa-record-vinyl"></li>' +
+    '</ul>' +
+    '</div>' +
+    '<div class="card-user-bio">' +
+    '<h4 id="album-artist">AC/DC</h4>' +
+    '<p id="album-track">Thunderstruck</p>' +
+    '<span class="location"><span class="location-icon fa fa-map-marker"></span><span class="location-text">Makkah Al-Mukaramah</span></span>' +
+    '</div>' +
+    '<div class="card-user-button">' +
+    '<a href="#" class="button">FOLLOW</a>' +
+    '</div>'
 
-  data.forEach((result) => {
-    var resultItem = document.createElement("div");
+
+  trackSearchData.body.track_list.forEach((result) => {
+    trackSearchResultsContainer.appendChild(trackSearchResultsItem);
+    var trackLyricsIcon = document.querySelector('.fa-microphone-lines');
     resultItem.textContent = result.title;
     resultsContainer.appendChild(resultItem);
   });
+  trackSearchResultsContainer.style.display = 'block';
 }
-/*JH*/
 
 /* Code to run */
 
 /* Jason's area */
-
-// var searchButton = document.querySelector("#searchButton");
-// var searchText = document.querySelector("#searchText");
-
-// var searchedItem;
-// var userSearches;
-
-// var searchParameters = {
-//     title: // fetch required
-//     artist: // fetch required
-
-// }
-
-// var pushToStorage = [];
-
-// function findCover() {
-// add fetch here
-
-// }
-
-// var searches = [];
-
-// searchButton.addEventListener("click", function(event) {
-//     event.preventDefault();
-
-//     searches.push(searchText.value);
-//     searchText.value = "";
-
-//     localStorage.setItem("search", JSON.stringify(searches));
-
-// addSearchHistory();
-// findCover();
-
-// function init () {
-//     var searchesList = JSON.parse(localStorage.getItem("search"));
-//     if (searchesList !== null) {
-//         searches = searchesList;
-//     }
-// }
-
-// function addSearchHistory() {
-//     // save to local storage
-//     console.log(searches);
-
-//     for (var i = 0; i < searches.length; i++) {
-//         console.log(searches[i]);
-//     }
-//     // userSearches.textContent = searches;
-//     // userSearches is the list of searches to display while searches is an array of them
-// }
-
-// init();
-
 /* Jason's area */
 
 /* Jackson's area */
@@ -434,18 +432,18 @@ var span = document.getElementsByClassName("close")[0];
 function displayModal(data) {
   var lyrics = data.message.body.lyrics.lyrics_body;
   // console.log(data.message.body.lyrics.lyrics_body);
-    modal.style.display = "block";
-    document.getElementById('modalText').textContent = lyrics;
+  modal.style.display = "block";
+  document.getElementById('modalText').textContent = lyrics;
 };
 
 span.onclick = function () {
-    modal.style.display = "none";
+  modal.style.display = "none";
 };
 
 window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 };
 
 /* Jesus' area */
