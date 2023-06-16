@@ -26,7 +26,7 @@ function performSearch(trackTitle) {
 
   fetch(trackSearchUrl)
     .then((trackSearchResponse) => trackSearchResponse.json())
-    .then((trackSearchData) => displayResults(trackSearchData))
+    .then((trackSearchData) => displayTrackSearchResults(trackSearchData))
     .catch((error) => console.log(error));
 };
 
@@ -57,6 +57,10 @@ function displayTrackSearchResults(trackSearchData) {
     trackSearchResultsItemAlbumArt.setAttribute('src', 'https://placehold.it/350x350');
     trackSearchResultsItemAlbumArt.setAttribute('alt', 'Track '+i+' album cover art.');
     trackSearchResultsItemAlbumArt.setAttribute('class', 'user-image');
+
+
+    trackSearchResultsItemAlbumArtContainer.appendChild(trackSearchResultsItemAlbumArt);
+    trackSearchResultsItem.appendChild(trackSearchResultsItemAlbumArtContainer);
     
     var trackSearchResultsItemLinksContainer = document.createElement('div');
     trackSearchResultsItemLinksContainer.setAttribute('id', 'album-links-'+i);
@@ -66,43 +70,60 @@ function displayTrackSearchResults(trackSearchData) {
     trackSearchResultsItemLinksList.setAttribute('id', 'album-links-list-'+i);
     trackSearchResultsItemLinksList.setAttribute('class', 'menu');
     
-    var trackSearchResultsItemLinksList = document.createElement('ul');
-    trackSearchResultsItemLinksList.setAttribute('id', 'album-links-list-'+i);
-    trackSearchResultsItemLinksList.setAttribute('class', 'menu');
-    
     var trackSearchResultsItemLinksListLyrics = document.createElement('li');
     trackSearchResultsItemLinksListLyrics.setAttribute('id', 'track-lyrics-'+i);
     trackSearchResultsItemLinksListLyrics.setAttribute('class', 'fa-solid fa-microphone-lines fa-2xl');
     
+    var trackSearchResultsItemLinksListWatch = document.createElement('li');
+    trackSearchResultsItemLinksListWatch.setAttribute('id', 'track-watch-'+i);
+    trackSearchResultsItemLinksListWatch.setAttribute('class', 'fa-brands fa-youtube fa-2xl');
+    
+    var trackSearchResultsItemLinksListListen = document.createElement('li');
+    trackSearchResultsItemLinksListListen.setAttribute('id', 'track-listen-'+i);
+    trackSearchResultsItemLinksListListen.setAttribute('class', 'fa-brands fa-spotify fa-2xl');
+    
+    var trackSearchResultsItemLinksListBuy = document.createElement('li');
+    trackSearchResultsItemLinksListBuy.setAttribute('id', 'track-buy-'+i);
+    trackSearchResultsItemLinksListBuy.setAttribute('class', 'fa-brands fa-spotify fa-2xl');
+    
+    trackSearchResultsItemLinksList.appendChild(trackSearchResultsItemLinksListLyrics);
+    trackSearchResultsItemLinksList.appendChild(trackSearchResultsItemLinksListWatch);
+    trackSearchResultsItemLinksList.appendChild(trackSearchResultsItemLinksListListen);
+    trackSearchResultsItemLinksList.appendChild(trackSearchResultsItemLinksListBuy);
+    trackSearchResultsItemLinksContainer.appendChild(trackSearchResultsItemLinksList);
+    trackSearchResultsItem.appendChild(trackSearchResultsItemLinksContainer);
+
+    var trackSearchResultsItemTitles = document.createElement('div');
+    trackSearchResultsItemTitles.setAttribute('id', 'track-info-'+i);
+    trackSearchResultsItemTitles.setAttribute('class', 'card-user-bio');
+    
+    var trackSearchResultsItemTitlesArtist = document.createElement('h4');
+    trackSearchResultsItemTitlesArtist.setAttribute('id', 'track-artist-'+i);
+    
+    var trackSearchResultsItemTitlesTrack = document.createElement('p');
+    trackSearchResultsItemTitlesTrack.setAttribute('id', 'track-title-'+i);
+    
+    trackSearchResultsItemTitles.appendChild(trackSearchResultsItemTitlesArtist);
+    trackSearchResultsItemTitles.appendChild(trackSearchResultsItemTitlesTrack);
+    trackSearchResultsItem.appendChild(trackSearchResultsItemTitles);
+    
 }
 
-  var trackSearchItemBlock = '<div class="card-user-avatar">' +
-    '<img id="album-art" src="https://placehold.it/350x350" alt="Album Art" class="user-image">' +
-    '</div>' +
-    '<div class="card-user-social">' +
-    '<ul class="menu">' +
-    '<li class="fa-solid fa-microphone-lines fa-2xl"></li>' +
-    '<li class="fa-solid fa-file-audio"></li>' +
-    '<li class="fa-solid fa-ticket"></li>' +
-    '<li class="fa-solid fa-record-vinyl"></li>' +
-    '</ul>' +
-    '</div>' +
-    '<div class="card-user-bio">' +
-    '<h4 id="album-artist">AC/DC</h4>' +
-    '<p id="album-track">Thunderstruck</p>' +
-    '<span class="location"><span class="location-icon fa fa-map-marker"></span><span class="location-text">Makkah Al-Mukaramah</span></span>' +
-    '</div>' +
-    '<div class="card-user-button">' +
-    '<a href="#" class="button">FOLLOW</a>' +
-    '</div>'
+    // '<h4 id="album-artist">AC/DC</h4>' +
+    // '<p id="album-track">Thunderstruck</p>' +
+    // '<span class="location"><span class="location-icon fa fa-map-marker"></span><span class="location-text">Makkah Al-Mukaramah</span></span>' +
+    // '</div>' +
+    // '<div class="card-user-button">' +
+    // '<a href="#" class="button">FOLLOW</a>' +
+    // '</div>'
 
 
-  trackSearchData.body.track_list.forEach((result) => {
-    trackSearchResultsContainer.appendChild(trackSearchResultsItem);
-    var trackLyricsIcon = document.querySelector('.fa-microphone-lines');
-    resultItem.textContent = result.title;
-    resultsContainer.appendChild(resultItem);
-  });
+  // trackSearchData.body.track_list.forEach((result) => {
+  //   trackSearchResultsContainer.appendChild(trackSearchResultsItem);
+  //   var trackLyricsIcon = document.querySelector('.fa-microphone-lines');
+  //   resultItem.textContent = result.title;
+  //   resultsContainer.appendChild(resultItem);
+  // });
   trackSearchResultsContainer.style.display = 'block';
 }
 
