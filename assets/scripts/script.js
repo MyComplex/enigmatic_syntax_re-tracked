@@ -1,58 +1,58 @@
 /* Code to run */
 /*JG*/
-// var searchButton = document.querySelector("#searchButton");
-// var searchText = document.querySelector("#searchText");
+var searchButton = document.querySelector("#searchButton");
+var searchText = document.querySelector("#searchText");
 
 // console.log(searchText.value);
 
-// var searchedItem;
-// var userSearches;
+var searchedItem;
+var userSearches;
 
-// var searches = [];
+var searches = [];
 
-// searchButton.addEventListener("click", function (event) {
-//     event.preventDefault();
+searchButton.addEventListener("click", function (event) {
+  event.preventDefault();
 
-//     searches.push(searchText.value);
-//     // searchText.value = "";
+  searches.push(searchText.value);
+  // searchText.value = "";
 
-//     localStorage.setItem("search", JSON.stringify(searches));
-//     performSearch(searchText.value);
-// })
+  localStorage.setItem("search", JSON.stringify(searches));
+  performSearch(searchText.value);
+})
 
-// function init() {
-//     var searchesList = JSON.parse(localStorage.getItem("search"));
-//     if (searchesList !== null) {
-//         searches = searchesList;
-//     }
-// }
+function init() {
+  var searchesList = JSON.parse(localStorage.getItem("search"));
+  if (searchesList !== null) {
+    searches = searchesList;
+  }
+}
 
-// init();
+init();
 /*JG*/
 /*JH*/
-// function performSearch(event) {
-//     // event.preventDefault();
-//     var searchTerm = searchInput.value;
-//     console.log(searchTerm);
-//     var apiUrl = `https://api.musixmatch.com/ws/1.1/track.search?q_track=${encodeURIComponent(searchTerm)}&apikey=1bea274e43466310a83604d5c9dffd24`;
+function performSearch(event) {
+  // event.preventDefault();
+  var searchTerm = searchInput.value;
+  console.log(searchTerm);
+  var apiUrl = `https://api.musixmatch.com/ws/1.1/track.search?q_track=${encodeURIComponent(searchTerm)}&apikey=1bea274e43466310a83604d5c9dffd24`;
 
-//     fetch(apiUrl)
-//         .then((response) => response.json())
-//         .then((data) => displayResults(data))
-//         .catch((error) => console.log(error));
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => displayResults(data))
+    .catch((error) => console.log(error));
 
-//     console.log(apiUrl);
-// }
+  // console.log(apiUrl);
+}
 
-// function displayResults(data) {
-//     resultsContainer.innerHTML = "";
+function displayResults(data) {
+  resultsContainer.innerHTML = "";
 
-//     data.forEach((result) => {
-//         var resultItem = document.createElement("div");
-//         resultItem.textContent = result.title;
-//         resultsContainer.appendChild(resultItem);
-//     });
-// }
+  data.forEach((result) => {
+    var resultItem = document.createElement("div");
+    resultItem.textContent = result.title;
+    resultsContainer.appendChild(resultItem);
+  });
+}
 /*JH*/
 
 /* Code to run */
@@ -419,44 +419,33 @@
 
 /* Jesus' area */
 
-// var lyrics;
-// function payloadParsing() {
-//   var localJSON = './assets/json/topUS.json';
-//   fetch(localJSON)
-//     .then((response) => response.json())
-//     .then((data) => getLyrics(data.message.body.track_list[0].track.track_share_url))
-// .then((data) => handleData(data.message.body.track_list[0].track.track_share_url))
-// }
+function fetchLyrics() {
+  var lyricsUrl = "https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=253912241&apikey=1bea274e43466310a83604d5c9dffd24"
 
-// console.log(lyrics);
+  fetch(lyricsUrl)
+    .then((response) => response.json())
+    .then((data) => displayModal(data))
+}
 
-// function getLyrics(/*data*/) {
-  // var lyricsLink = data;
-  // var lyricsUrl = "https://www.musixmatch.com/lyrics/Luke-Combs/Track-14?utm_source=application&utm_campaign=api&utm_medium="
-  // $.get(lyricsUrl, function (html) {
-    // alert($(html).find(".lyrics__content__ok").text());
-// console.log(data.message.body.track_list[0].track.track_share_url);
-// }
-// )
-// console.log(data.message.body.track_list[0].track.track_share_url)
-// }
+/* Modal for handling various displays */
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
 
-// function handleData(data){
-// lyrics = data;
-// console.log(lyrics.message.body.track_list[0].track.track_share_url);
-// console.log
-// }
+function displayModal(data) {
+  var lyrics = data.message.body.lyrics.lyrics_body;
+  // console.log(data.message.body.lyrics.lyrics_body);
+    modal.style.display = "block";
+    document.getElementById('modalText').textContent = lyrics;
+};
 
-// function storeResponse(data){
-//   lyrics = data.message.body.track_list[0].track.track_share_url;
-//   console.log(lyrics.message.body.track_list[0].track.track_share_url);
-// }
+span.onclick = function () {
+    modal.style.display = "none";
+};
 
-// function extractLyrics() {
-  // var lyricsUrl = "https://www.musixmatch.com/lyrics/Luke-Combs/Track-14?utm_source=application&utm_campaign=api&utm_medium="
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
 
-    // fetch(lyricsUrl)
-      // .then((response) => response.text())
-      // .then((data) => console.log(data))
-// }
 /* Jesus' area */

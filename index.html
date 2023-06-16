@@ -5,67 +5,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Spline+Sans&family=Play&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Re-Tracked</title>
+  <title>re:TRACKED</title>
 </head>
 
 <body>
-
-  <header class="top-content-section">
-    <form class="top-bar">
-      <fieldset id="history-container" class="top-bar-left">
-        <legend class="menu-text">Previous Tracks</legend>
-        <button>Song One</button>
-        <button>Song Two</button>
-        <button>Song Three</button>
-        <button>Song Four</button>
-      </fieldset>
-    </form>
-  </header>
-
-  <main class="hero-section">
-    <section class="hero-section-text">
-      <h1>Re-Tracked</h1>
-      <p>Find your favorite songs done by different artists.</p>
-      <h3>Enter the song and artist.</h3>
+  <main id="hero-section" class="hero-full-screen">
+    <header class="top-content-section">
+      <section class="top-bar">
+        <nav class="top-bar-left">
+          <ul id="history-container" class="menu">
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <article class="middle-content-section">
+      <h1 class="hero-title">re:TRACKED</h1>
       <form class="input-group input-group-rounded">
         <input id="searchText" class="input-group-field" type="search">
-        <fieldset class="input-group-button">
-          <button id="searchButton" class="button">Search</button>
-        </fieldset>
+        <div class="input-group-button">
+          <input id="searchButton" type="submit" class="button secondary" value="Search">
+        </div>
       </form>
-    </section>
+    </article>
+    <footer class="social-footer">
+      <div class="social-footer-icons">
+        <ul class="menu simple">
+          <li><i class="fa-solid fa-backward fa-2xl"></i></li>
+          <li><i class="fa-solid fa-forward fa-2xl"></i></li>
+          <li><i class="fa-solid fa-stop fa-2xl"></i></li>
+          <li><i class="fa-solid fa-play fa-2xl"></i></li>
+        </ul>
+      </div>
+    </footer>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p id="modalText"></p>
+            <span class="close">&times;</span>
+        </div>
+    </div>
   </main>
-
-  <footer class="social-footer">
-    <section class="social-footer-left">
-      <img src="./assets/img/vinyl-record-svgrepo-com.svg" alt="vinyl record icon" class="social-footer-logo">
-    </section>
-    <nav class="social-footer-icons">
-      <ul class="menu simple">
-        <li><a href="#"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
-      </ul>
-    </nav>
-    <section class="social-footer-right">
-      <h6>©2023 Enigmatic Syntax</h6>
-    </section>
-  </footer>
-  <!-- <script src="http://bucky-cors-proxy.herokuapp.com/fetch.js"></script> -->
+  <script src="http://bucky-cors-proxy.herokuapp.com/fetch.js"></script>
   <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.8/dayjs.min.js"></script>
   <script type="text/javascript" src="./assets/scripts/script.js"></script>
-
 </body>
 
 </html>

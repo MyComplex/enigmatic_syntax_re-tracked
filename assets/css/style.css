@@ -1,130 +1,156 @@
-* {
-  padding: 0px;
-  margin: 0px;
-}
-
-.top-content-section {
+.hero-full-screen {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  background: black;
-  height: 10vh;
-}
-
-.top-bar {
-  background: transparent;
-  width: 100%;
-}
-
-.top-bar .menu-text {
-  color: dimgray;
-  font-size: larger;
-}
-
-.top-bar button {
-  background-color: black;
-  color: #696969;
-  font-weight: bold;
-  height: 40px;
-  min-width: 70px;
-  padding: 10px;
-  margin-right: 30px;
-  box-shadow: 3px 3px 9px 1px blue;
-  border-radius: 10px;
-}
-
-h1 {
-  color: white;
-  font-family: 'Climate Crisis', cursive;
-  text-shadow: 2px 2px 4px red;
-}
-
-p {
-  font-family: 'Spline Sans', sans-serif;
-  padding: 30px;
-  margin-bottom: -30px;
-  color: white;
-}
-
-.hero-section {
-  background-color: black;
-  height: 80vh;
-  text-align: center;
-  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  /* background: url("../img/504759.svg") center center no-repeat; */
+  background-color: black;
 }
 
-h3 {
-  font-family: 'Play', sans-serif;
-  text-shadow: 1px 1px 2px #565a5c;
+.hero-full-screen .middle-content-section {
+  text-align: center;
+  color: #fefefe;
 }
 
-form {
+.hero-title {
+  font-family: 'Rammetto One', cursive;
+  font-size: 2rem;
+  text-shadow: red;
+}
+
+.hero-full-screen .top-content-section {
+  width: 100%;
+}
+
+.hero-full-screen .bottom-content-section {
+  padding: 1rem;
+}
+
+.hero-full-screen .bottom-content-section svg {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fefefe;
+}
+
+.hero-full-screen .top-bar {
+  background: transparent;
+}
+
+.hero-full-screen .top-bar .menu {
+  background: transparent;
+}
+
+.hero-full-screen .top-bar .menu-text {
+  color: #fefefe;
+}
+
+.hero-full-screen .top-bar .menu li {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.hero-full-screen .top-bar .menu a {
+  color: #fefefe;
+  font-weight: bold;
 }
 
 .input-group-rounded .input-group-field {
   border-radius: 5000px 0 0 5000px;
   padding-left: 1rem;
-  margin: 0 0 0 30px;
-  max-width: 600px;
 }
 
 .input-group-rounded .input-group-button .button {
   border-radius: 0 5000px 5000px 0;
-  width: 100px;
-  background-color: red;
   font-size: 0.8rem;
-  margin: 0 30px 0 0;
+  background-color: red;
 }
 
 .social-footer {
-  /* padding: 1rem; */
-  background: black;
+  padding: 1rem;
+  background: #444444;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
-  height: 10vh;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.social-footer-left {
-  /* width: 33.33vw;
-  height: 8vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; */
-}
-
-.social-footer-logo {
-  height: 5vh;
 }
 
 .social-footer .social-footer-icons li:last-of-type {
   margin-right: 0;
 }
 
-.social-footer .social-footer-icons .fa {
-  font-size: 1.3rem;
-  color: #4d4d4d;
+.social-footer .social-footer-icons .fa-solid {
+  font-size: 2rem;
+  color: #fefefe;
 }
 
-.social-footer .social-footer-icons .fa:hover {
-  color: #4d4d4d;
+.social-footer .social-footer-icons .fa-solid:hover {
+  color: limegreen;
   transition: color 0.3s ease-in;
 }
 
-.social-footer-right {
-  /* width: 33.33vw;
-  height: 8vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; */
+.social-footer .social-footer-icons .fa-play:hover {
+  color: red;
+  transition: color 0.3s ease-in;
 }
 
-footer section h6 {
-  color: #4d4d4d;
-  font-family: 'Spline Sans', sans-serif;
+.social-footer .social-footer-icons .fa-stop:hover {
+  color: black;
+  transition: color 0.3s ease-in;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: red;
+  background-color: salmon;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
 }
