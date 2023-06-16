@@ -111,3 +111,39 @@ h6 {
   font-family: 'Spline Sans', sans-serif;
 }
 
+.newBox {
+  position: static;
+  left: 0px;
+  width: 80px;
+  border-radius: 4px;
+  padding: 8px;
+  height: 160px;
+  background-color: black;
+  box-shadow: 3px 3px 9px 1px blue;
+  transition: 0.4s ease-in-out;
+  color: blue;
+}
+
+.newBox:hover {
+  flex: 3;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modalContent {
+  position: static;
+  left: 0px;
+  width: 80px;
+  border-radius: 4px;
+  padding: 8px;
+  height: 160px;
+  background-color: black;
+  box-shadow: 3px 3px 9px 1px blue;
+  transition: 0.4s ease-in-out;
+  color: blue;
+}
+.modalContent:hover {
+  flex: 3;
+  font-weight: bold;
+  cursor: pointer;
+}

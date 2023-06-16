@@ -78,18 +78,17 @@ searchButton.addEventListener("click", performSearch);
 //   console.log(apiUrl);
 // }
 
-function performSearch(event) {
+async function performSearch(event) {
   //testing function
   event.preventDefault();
   var apiUrl = "./assets/json/musixMatch.json";
 
   fetch(apiUrl)
-    .then((response) => response.json())
-    .then((data) => displayResults(data))
-    .catch((error) => console.log(error));
-}
+  .then((response) => response.json())
+  .then((data) => displayResults(data))
+  .catch((error) => console.log(error));
 
-var seeData ="";
+var seeData = "";
 
 function displayResults(data) {
   var resultData = data.message.body.track_list;
@@ -104,10 +103,67 @@ function displayResults(data) {
   for (let i = 0; i < resultData.length; i++) {
     const element = resultData[i];
     var newBox = document.createElement("div");
+    newBox.setAttribute("class", "newBox");
     newBox.textContent = element.track.track_name;
     resultsContainer.appendChild(newBox);
-  }
 
+    var modalContent = document.createElement("div");
+  modalContent.setAttribute("class", "modal-content");
+  modalContent.textContent = "Modal content for " + element.track.album_name;
+
+  newBox.appendChild(modalContent);
+  }
+}
+console.log(seeData);
+}
+
+  // const url = 'https://moviesdatabase.p.rapidapi.com/titles?genre=Comedy';
+  // const options = {
+  //   method: 'GET',
+  //   headers: {
+  //     'X-RapidAPI-Key': 'a2c4209bcdmsh1c0c1f330f8d374p1e3849jsn2ecde94c2957',
+  //     'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+  //   }
+  // };
+  
+  // try {
+  //   const response = await fetch(url, options);
+  //   const result = await response.text();
+  //   displayResults(result);
+  // } catch (error) {
+  //   console.error(error);
+  // }
+
+  // fetch(apiUrl)
+//     .then((response) => response.json())
+//     .then((data) => displayResults(data))
+//     .catch((error) => console.log(error));
+// }
+
+// var seeData ="";
+
+// function displayResults(data) {
+//   var resultData = data.message.body.track_list;
+//   console.log(resultData);
+//   seeData = resultData;
+//   var resultsContainer = document.querySelector(".hero-section");
+//   console.log(resultsContainer);
+//   var hideHolder = document.querySelector(".hero-section-text");
+//   console.log(hideHolder);
+//   hideHolder.style.display = "none";
+  
+
+//   for (let i = 0; i < resultData.length; i++) {
+//     const element = resultData[i];
+//     var newBox = document.createElement("div");
+//     newBox.setAttribute("class","newBox");
+//     newBox.textContent = element.track.track_name;
+//     resultsContainer.appendChild(newBox);
+//   }
+
+
+  // var numColumns = Math.ceil(resultData.length / 4); // Assuming 4 items per row
+  // resultsContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
 
   // Set content or modify other attributes of the new box element
   // resultsContainer.textContent = resultData;
@@ -116,8 +172,7 @@ function displayResults(data) {
 
   // Append the new box element to the results container
   // resultsContainer.appendChild(resultsContainer);
-}
-console.log(seeData);
+
 /* Jackson's area */
 
 /* Lidell's area */
@@ -126,4 +181,3 @@ console.log(seeData);
 
 /* Jesus' area */
 
-/* Jesus' area */
