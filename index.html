@@ -24,7 +24,7 @@
       </section>
     </header>
     <article id="main-container" class="middle-content-section">
-      <h1 class="hero-title">re:TRACKED</h1>
+      <h1 class="hero-title">re:Tracked</h1>
       <form class="input-group input-group-rounded">
         <input id="search-text" class="input-group-field" type="search">
         <section class="input-group-button">
@@ -32,8 +32,12 @@
         </section>
       </form>
     </article>
-    <section id="results-container">
-    </section>
+    <article class="swiper mySwiper">
+      <section id="results-container" class="swiper-wrapper">
+      </section>
+      <footer id="results-paginator" class="swiper-pagination"></footer>
+    </article>
+
     <footer class="social-footer">
       <div class="social-footer-icons">
         <ul class="menu simple">
@@ -51,8 +55,13 @@
       </div>
     </div>
   </main>
+  <!-- CORS Work Around -->
   <script src="http://bucky-cors-proxy.herokuapp.com/fetch.js"></script>
+  <!-- MusixMatch Lyrics -->
   <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
   <script type="text/javascript" src="./assets/scripts/script.js"></script>
 </body>
 

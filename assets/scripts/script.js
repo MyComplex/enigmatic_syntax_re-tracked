@@ -6,6 +6,7 @@ var trackSearchDisplay = document.getElementById('main-container');
 var searchText = document.getElementById('search-text');
 var searchButton = document.getElementById('search-button');
 var trackSearchResultsContainer = document.getElementById('results-container');
+var trackSearchResultsContainerPaginator = document.getElementById('results-paginator');
 
 var searches = localStorage.getItem('searches');
 searches = (searches) ? JSON.parse(searches) : [];
@@ -31,11 +32,30 @@ function performSearch(trackTitle) {
 };
 
 function displayTrackSearchResults(trackSearchData) {
-  console.log(trackSearchData.message.body.track_list);
+/* HIDE APP TITLE & SEARCH BAR */
   trackSearchDisplay.style.display = 'none';
-
+/* CLEAR RESULTS CONTAINER */
   trackSearchResultsContainer.innerHTML = "";
 
+/* BUILD RESULTS HEADER
+var resultsHeaderContainer = document.createElement('div');
+// var resultsHeaderArtistAndTitleContainer = document.createElement('div');
+var resultsHeaderArtistAndTitle = document.createElement('div');
+resultsHeaderArtistAndTitle.textContent = 'Artist & Track Title';
+// var resultsHeaderAlbumArtContainer = document.createElement('div');
+var resultsHeaderAlbumArt = document.createElement('div');
+resultsHeaderAlbumArt.textContent = 'Album Cover';
+// var resultsHeaderLinksContainer = document.createElement('div');
+var resultsHeaderLinks = document.createElement('div');
+resultsHeaderLinks.textContent = 'Additional Track Options';
+
+resultsHeaderContainer.appendChild(resultsHeaderArtistAndTitle);
+resultsHeaderContainer.appendChild(resultsHeaderAlbumArt);
+resultsHeaderContainer.appendChild(resultsHeaderLinks);
+trackSearchResultsContainer.appendChild(resultsHeaderContainer);
+ */
+
+/* LOOP THROUGH RESULTS */
   for (let i = 0; i < trackSearchData.message.body.track_list.length; i++) {
     var trackIndex = trackSearchData.message.body.track_list[i];
     var trackId = trackIndex.track.track_id;
@@ -47,7 +67,7 @@ function displayTrackSearchResults(trackSearchData) {
 
     var trackSearchResultsItem = document.createElement('div');
     trackSearchResultsItem.setAttribute('id', trackId + '-container');
-    trackSearchResultsItem.setAttribute('class', 'card-user-container');
+    trackSearchResultsItem.setAttribute('class', 'card-user-container swiper-slide');
 
     var trackAlbumArtContainer = document.createElement('div');
     trackAlbumArtContainer.setAttribute('id', trackId + '-art-container');
@@ -55,14 +75,12 @@ function displayTrackSearchResults(trackSearchData) {
 
     var trackAlbumArt = document.createElement('img');
     trackAlbumArt.setAttribute('id', trackId + '-album-art');
-    trackAlbumArt.setAttribute('src', 'https://via.placeholder.com/350x350');
+    trackAlbumArt.setAttribute('src', 'https://via.placeholder.com/30x30');
     trackAlbumArt.setAttribute('alt', albumName + ' cover art.');
     trackAlbumArt.setAttribute('class', 'user-image');
 
-
     trackAlbumArtContainer.appendChild(trackAlbumArt);
-    trackSearchResultsItem.appendChild(trackAlbumArtContainer);
-
+    
     var trackLinksContainer = document.createElement('div');
     trackLinksContainer.setAttribute('id', trackId + '-album-links');
     trackLinksContainer.setAttribute('class', 'card-user-social');
@@ -74,7 +92,7 @@ function displayTrackSearchResults(trackSearchData) {
     var trackLinksListLyrics = document.createElement('li');
     trackLinksListLyrics.setAttribute('id', trackId + '-track-lyrics');
     trackLinksListLyrics.setAttribute('class', 'fa-solid fa-microphone-lines fa-2xl');
-
+    
     var trackLinksListWatch = document.createElement('li');
     trackLinksListWatch.setAttribute('id', trackId + '-track-watch');
     trackLinksListWatch.setAttribute('class', 'fa-brands fa-youtube fa-2xl');
@@ -92,27 +110,31 @@ function displayTrackSearchResults(trackSearchData) {
     trackLinksListContainer.appendChild(trackLinksListListen);
     trackLinksListContainer.appendChild(trackLinksListBuy);
     trackLinksContainer.appendChild(trackLinksListContainer);
-    trackSearchResultsItem.appendChild(trackLinksContainer);
-
+    
     var trackTitlesContainer = document.createElement('div');
     trackTitlesContainer.setAttribute('id', trackId + '-track-info-container');
     trackTitlesContainer.setAttribute('class', 'card-user-bio');
-
+    
     var trackTitlesArtist = document.createElement('h4');
     trackTitlesArtist.setAttribute('id', trackId + '-track-artist');
+    trackTitlesArtist.setAttribute('class', 'track-artist');
     trackTitlesArtist.textContent = artistName;
-
+    
     var trackTitlesTrack = document.createElement('p');
     trackTitlesTrack.setAttribute('id', trackId + '-track-title');
+    trackTitlesTrack.setAttribute('class', 'track-title');
     trackTitlesTrack.textContent = trackName;
-
+    
     trackTitlesContainer.appendChild(trackTitlesArtist);
     trackTitlesContainer.appendChild(trackTitlesTrack);
-    trackSearchResultsItem.appendChild(trackTitlesContainer);
 
+    trackSearchResultsItem.appendChild(trackTitlesContainer);
+    trackSearchResultsItem.appendChild(trackAlbumArtContainer);
+    trackSearchResultsItem.appendChild(trackLinksContainer);
+    
     trackSearchResultsContainer.appendChild(trackSearchResultsItem);
   }
-
+  
   // '<h4 id="album-artist">AC/DC</h4>' +
   // '<p id="album-track">Thunderstruck</p>' +
   // '<span class="location"><span class="location-icon fa fa-map-marker"></span><span class="location-text">Makkah Al-Mukaramah</span></span>' +
@@ -473,4 +495,40 @@ window.onclick = function (event) {
   }
 };
 
+/* SWIPER */
+/* RESPONSIVE SLIDER 
+var TrandingSlider = new Swiper('.tranding-slider', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2.5,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+*/
+
+/* FROM SWIPER
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+*/
 /* Jesus' area */
