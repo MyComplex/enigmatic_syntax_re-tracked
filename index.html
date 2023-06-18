@@ -5,16 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS RESET -->
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <!-- FOUNDATION FRAMEWORK -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>re:TRACKED</title>
+  <title>re:Tracked</title>
 </head>
 
 <body>
   <main id="hero-section" class="hero-full-screen">
+
     <header class="top-content-section">
       <section class="top-bar">
         <nav class="top-bar-left">
@@ -23,6 +30,7 @@
         </nav>
       </section>
     </header>
+
     <article id="main-container" class="middle-content-section">
       <h1 class="hero-title">re:Tracked</h1>
       <form class="input-group input-group-rounded">
@@ -32,10 +40,19 @@
         </section>
       </form>
     </article>
-    <article class="swiper mySwiper">
-      <section id="results-container" class="swiper-wrapper">
+
+    <article id="results">
+      <header class="results-container">
+        <h1 class="results-heading text-center">Search Results</h1>
+      </header>
+      <section class="results-container">
+        <div class="swiper results-slider">
+          <div id="results-card-container" class="swiper-wrapper">
+          </div>
+        </div>
       </section>
-      <footer id="results-paginator" class="swiper-pagination"></footer>
+      <footer id="results-paginator" class="swiper-pagination">
+      </footer>
     </article>
 
     <footer class="social-footer">
@@ -48,20 +65,22 @@
         </ul>
       </div>
     </footer>
+
     <div id="myModal" class="modal">
       <div class="modal-content">
         <p id="modalText"></p>
         <span class="close">&times;</span>
       </div>
     </div>
-  </main>
-  <!-- CORS Work Around -->
-  <script src="http://bucky-cors-proxy.herokuapp.com/fetch.js"></script>
-  <!-- MusixMatch Lyrics -->
-  <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+  </main>
+
+  <!-- CORS WORK AROUND -->
+  <script src="http://bucky-cors-proxy.herokuapp.com/fetch.js"></script>
+  <!-- MXM LYRICS SUPPORT -->
+  <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="./assets/scripts/script.js"></script>
 </body>
 
