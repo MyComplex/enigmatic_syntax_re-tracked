@@ -49,12 +49,12 @@ function displayTrackSearchResults(trackSearchData) {
 
     /* SLIDE */
     var slide = document.createElement('div');
-    slide.setAttribute('id', artistId + '-' + albumId + '-' + trackId);
+    slide.setAttribute('id', i);
     slide.setAttribute('class', 'swiper-slide result-slide');
 
     /* ALBUM ART CONTAINER */
     var albumArtContainer = document.createElement('div');
-    albumArtContainer.setAttribute('id', trackId + '-album-art');
+    albumArtContainer.setAttribute('id', albumId + '-album-art');
     albumArtContainer.setAttribute('class', 'result-slide-img');
 
     /* ALBUM ART */
@@ -99,19 +99,19 @@ function displayTrackSearchResults(trackSearchData) {
 
     /* LINK LIST ITEMS*/
     var lyrics = document.createElement('li');
-    lyrics.setAttribute('id',trackId + ' lyrics');
+    lyrics.setAttribute('id', trackId + ' lyrics');
     lyrics.setAttribute('class', 'fa-solid fa-microphone-lines');
 
     var video = document.createElement('li');
-    video.setAttribute('id',trackId + ' video');
+    video.setAttribute('id', trackId + ' video');
     video.setAttribute('class', 'fa-brands fa-youtube');
 
     var listen = document.createElement('li');
-    listen.setAttribute('id',trackId + ' listen');
+    listen.setAttribute('id', trackId + ' listen');
     listen.setAttribute('class', 'fa-brands fa-spotify');
 
     var buy = document.createElement('li');
-    buy.setAttribute('id',trackId + ' buy');
+    buy.setAttribute('id', trackId + ' buy');
     buy.setAttribute('class', 'fa-brands fa-amazon');
 
     /* APPEND ITEMS TO LIST */
@@ -161,11 +161,43 @@ window.onclick = function (event) {
   }
 };
 
+var spotifyToken;
 
-function querySpotify() {
+function authSpotify() {
   const clientId = '07ff8b4538b94722848066ac1547ceb1';
   const clientSecret = 'e29634d15e1d4ac4bf533209bcc77367';
+  fetch('https://accounts.spotify.com/api/token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
+    },
+    body: 'grant_type=client_credentials'
+  })
+    .then((authResponse) =>
+      authResponse.json())
+    .then(authResponseData => {
+      spotifyToken = authResponseData.access_token;
+    })
+}
 
+var spotifySearch;
+
+function searchSpotify(track, album, artist) {
+  // var searchUrl = `https://api.spotify.com/v1/search?query=${encodeURIComponent(track)}+${encodeURIComponent(album)}+${encodeURIComponent(artist)}&type=track&market=us&limit=1&offset=0`;
+  var searchUrl = `https://api.spotify.com/v1/search?query=thriller+artist%3Amichael%20jackson+album%3Athriller&type=track&market=US&locale=en-US%2Cen%3Bq%3D0.9&offset=0&limit=1`;
+
+  fetch(searchUrl, {
+    method: 'GET',
+    headers: {
+      'Authorization' : 'Bearer ' + spotifyToken
+    }
+  })
+    .then((searchResponse) =>
+      searchResponse.json())
+    .then(searchResponseData => {
+      spotifySearch = searchResponseData;
+    })
 }
 
 var ResultsSlider = new Swiper('.results-slider', {
@@ -189,3 +221,17 @@ var ResultsSlider = new Swiper('.results-slider', {
     prevEl: '.swiper-button-prev',
   }
 });
+
+/* Monitor links */
+var linksUl = document.getElementById('history-container');
+
+linksUl.addEventListener('click', linkIconClick, false);
+
+function linkIconClick(event) {
+  if (event.target !== event.currentTarget) {
+    var clickedItem = event.target.id;
+    getCurrentWeatherData(clickedItem);
+    getForecastWeatherData(clickedItem);
+  }
+  event.stopPropagation();
+}
