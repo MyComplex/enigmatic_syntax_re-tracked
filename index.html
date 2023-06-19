@@ -15,6 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Roboto+Mono&display=swap" rel="stylesheet">
   <!-- FOUNDATION FRAMEWORK -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
+  <!-- SWIPER FRAMEWORK -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>re:Tracked</title>
 </head>
@@ -31,7 +33,7 @@
       </section>
     </header>
 
-    <article id="main-container" class="middle-content-section">
+    <article id="search-container" class="middle-content-section">
       <h1 class="hero-title">re:Tracked</h1>
       <form class="input-group input-group-rounded">
         <input id="search-text" class="input-group-field" type="search">
@@ -41,28 +43,32 @@
       </form>
     </article>
 
-    <article id="results">
-      <header class="results-container">
+    <article id="results-container">
+      <header class="results-section">
         <h1 class="results-heading text-center">Search Results</h1>
       </header>
-      <section class="results-container">
+      <section class="results-section">
         <div class="swiper results-slider">
-          <div id="results-card-container" class="swiper-wrapper">
+          <div id="slide-container" class="swiper-wrapper">
           </div>
         </div>
       </section>
-      <footer id="results-paginator" class="swiper-pagination">
+      <footer class="result-slider-control">
+        <div class="swiper-button-prev slider-arrow">
+          <i class="fa-solid fa-backward-step"></i>
+        </div>
+        <div class="swiper-button-next slider-arrow">
+          <i class="fa-solid fa-forward-step"></i>
+        </div>
+        <div id="results-paginator" class="swiper-pagination">
+        </div>
       </footer>
     </article>
 
-    <footer class="social-footer">
-      <div class="social-footer-icons">
-        <ul class="menu simple">
-          <li class="fa-solid fa-play fa-2xl"></li>
-          <li class="fa-solid fa-backward fa-2xl"></li>
-          <li class="fa-solid fa-forward fa-2xl"></li>
-          <li class="fa-solid fa-eject fa-2xl"></li>
-        </ul>
+    <footer class="main-footer">
+      <div class="main-footer-text">
+        <h1 class="team">Enigmatic Syntax</h1>
+        <h1 class="team">¯\_ (ツ)_/¯</h1>
       </div>
     </footer>
 
