@@ -149,7 +149,7 @@ var span = document.getElementsByClassName("close")[0];
 function displayModal(data) {
   var lyrics = data.message.body.lyrics.lyrics_body;
   // console.log(data.message.body.lyrics.lyrics_body);
-  modal.style.display = "block";
+  modal.style.display = "flex";
   document.getElementById('modalText').textContent = lyrics;
 };
 
