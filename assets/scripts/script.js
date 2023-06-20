@@ -135,7 +135,9 @@ function displayTrackSearchResults(trackSearchData) {
 function fetchLyrics() {
   var lyricsUrl = "https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=253912241&apikey=1bea274e43466310a83604d5c9dffd24"
 
-  fetch(lyricsUrl)
+  fetch(lyricsUrl, {
+    method: 'GET'
+  })
     .then((response) => response.json())
     .then((data) => displayModal(data))
 }
