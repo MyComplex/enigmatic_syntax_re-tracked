@@ -17,9 +17,9 @@ searchButton.addEventListener('click', function (event) {
   var trackTitle = searchText.value;
   performSearch(trackTitle);
 
-  // searches.push(searchText.value);
+  searches.push(searchText.value);
+  localStorage.setItem("searches", JSON.stringify(searches));
 
-  // localStorage.setItem("searches", JSON.stringify(searches));
 });
 
 function performSearch(trackTitle) {
@@ -94,24 +94,24 @@ function displayTrackSearchResults(trackSearchData) {
 
     /* LINK LIST */
     var linkList = document.createElement('ul');
-    linkList.setAttribute('id', trackId);
+    linkList.setAttribute('id', trackId + '-links-container');
     linkList.setAttribute('class', 'option');
 
     /* LINK LIST ITEMS*/
     var lyrics = document.createElement('li');
-    lyrics.setAttribute('id', trackId + ' lyrics');
+    lyrics.setAttribute('id', trackId + '-lyrics');
     lyrics.setAttribute('class', 'fa-solid fa-microphone-lines');
 
     var video = document.createElement('li');
-    video.setAttribute('id', trackId + ' video');
+    video.setAttribute('id', trackId + '-video');
     video.setAttribute('class', 'fa-brands fa-youtube');
 
     var listen = document.createElement('li');
-    listen.setAttribute('id', trackId + ' listen');
+    listen.setAttribute('id', trackId + '-listen');
     listen.setAttribute('class', 'fa-brands fa-spotify');
 
     var buy = document.createElement('li');
-    buy.setAttribute('id', trackId + ' buy');
+    buy.setAttribute('id', trackId + '-buy');
     buy.setAttribute('class', 'fa-brands fa-amazon');
 
     /* APPEND ITEMS TO LIST */
@@ -132,8 +132,8 @@ function displayTrackSearchResults(trackSearchData) {
 }
 
 /* LYRICS FETCH */
-function fetchLyrics() {
-  var lyricsUrl = "https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=253912241&apikey=1bea274e43466310a83604d5c9dffd24"
+function fetchLyrics(trackID) {
+  var lyricsUrl = `https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${trackID}&apikey=1bea274e43466310a83604d5c9dffd24`
 
   fetch(lyricsUrl, {
     method: 'GET'
@@ -225,15 +225,14 @@ var ResultsSlider = new Swiper('.results-slider', {
 });
 
 /* Monitor links */
-var linksUl = document.getElementById('history-container');
-
-linksUl.addEventListener('click', linkIconClick, false);
+slideContainer.addEventListener('click', linkIconClick, false);
 
 function linkIconClick(event) {
   if (event.target !== event.currentTarget) {
     var clickedItem = event.target.id;
-    getCurrentWeatherData(clickedItem);
-    getForecastWeatherData(clickedItem);
+    var character = '-';
+    var bubbleId = clickedItem.split(character)[0];
+    fetchLyrics(bubbleId);
   }
   event.stopPropagation();
 }
