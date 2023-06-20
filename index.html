@@ -5,64 +5,91 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script src="http://bucky-cors-proxy.herokuapp.com/fetch.js"></script> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+  <!-- CSS RESET -->
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Spline+Sans&family=Play&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <!-- FOUNDATION FRAMEWORK -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
+  <!-- SWIPER FRAMEWORK -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Re-Tracked</title>
+  <title>re:Tracked</title>
 </head>
 
 <body>
+  <main id="hero-section" class="hero-full-screen">
 
-  <header class="top-content-section">
-    <form class="top-bar">
-      <fieldset class="top-bar-left">
-        <legend class="menu-text">Previous Tracks</legend>  
-          <button>Song One</button>
-          <button>Song Two</button>
-          <button>Song Three</button>
-          <button>Song Four</button>
-      </fieldset>
-    </form>
-  </header>
+    <header class="top-content-section">
+      <section class="top-bar">
+        <nav class="top-bar-left">
+          <ul id="history-container" class="menu">
+          </ul>
+        </nav>
+      </section>
+    </header>
 
-  <main class="hero-section">
-    <section class="hero-section-text">
-      <h1>Re-Tracked</h1>
-      <p>Find your favorite songs done by different artists.</p>
-      <h3>Enter the song and artist.</h3>
-      <div class="input-group input-group-rounded">
-        <input class="input-group-field" id="search-input" type="search" value="Never Gonna Give You Up">
-        <fieldset class="input-group-button">
-          <button id="search-button" class="button">Search</button>
-        </fieldset>
+    <article id="search-container" class="middle-content-section">
+      <h1 class="hero-title">re:Tracked</h1>
+      <form class="input-group input-group-rounded">
+        <input id="search-text" class="input-group-field" type="search">
+        <section class="input-group-button">
+          <input id="search-button" type="submit" class="button secondary" value="Search">
+        </section>
+      </form>
+    </article>
+
+    <article id="results-container">
+      <header class="results-section">
+        <h1 class="results-heading text-center">Search Results</h1>
+      </header>
+      <section class="results-section">
+        <div class="swiper results-slider">
+          <div id="slide-container" class="swiper-wrapper">
+          </div>
+        </div>
+      </section>
+      <footer class="result-slider-control">
+        <div class="swiper-button-prev slider-arrow">
+          <i class="fa-solid fa-backward-step"></i>
+        </div>
+        <div class="swiper-button-next slider-arrow">
+          <i class="fa-solid fa-forward-step"></i>
+        </div>
+        <div id="results-paginator" class="swiper-pagination">
+        </div>
+      </footer>
+    </article>
+
+    <footer class="main-footer">
+      <div class="main-footer-text">
+        <h1 class="team">Enigmatic Syntax</h1>
+        <h1 class="team">¯\_(ツ)_/¯</h1>
       </div>
-    </section>
-    <div id = "results-container"></div>
+    </footer>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content-container">
+        <div class="modal-content">
+          <div id="modalText"></div>
+          <div class="close">&times;</div>
+        </div>
+      </div>
+    </div>
+
   </main>
 
-  <footer class="social-footer">
-    <section class="social-footer-left">
-      <i class="fa fa-album-collection" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
-    </section>
-    <nav class="social-footer-icons">
-      <ul class="menu simple">
-        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-      </ul>
-    </nav>
-    <h6>©2023 Enigmatic Syntax</h6>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.8/dayjs.min.js"></script>
+  <!-- CORS WORK AROUND -->
+  <script src="https://bucky-cors-proxy.herokuapp.com/fetch.js"></script>
+  <!-- MXM LYRICS SUPPORT -->
+  <script type="text/javascript" src="https://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="./assets/scripts/script.js"></script>
-
 </body>
 
 </html>
