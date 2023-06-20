@@ -79,7 +79,6 @@ searchButton.addEventListener("click", performSearch);
 // }
 
 async function performSearch(event) {
-  //testing function
   event.preventDefault();
   var apiUrl = "./assets/json/musixMatch.json";
 
@@ -116,6 +115,28 @@ function displayResults(data) {
 }
 console.log(seeData);
 }
+
+function renderHistory() {
+  var historyArray = JSON.parse(localStorage.getItem("searches"));
+  var historyHolder = document.getElementById('history-container');
+  if (historyArray !== null) {
+      if (historyArray.length > 1) {
+          historyHolder.innerHTML = '';
+          for (var i = 0; i < historyArray.length; i++) {
+              var element = historyArray[i];
+              var historyButtonItem = document.createElement('button');
+              historyButtonItem.setAttribute('id', element.city);
+              historyButtonItem.textContent = element.city;
+              historyHolder.appendChild(historyButtonItem);
+          }
+      } else {
+          var historyButtonItem = document.createElement('button');
+          historyButtonItem.setAttribute('id', historyArray[0].city);
+          historyButtonItem.textContent = historyArray[0].city;
+          historyHolder.appendChild(historyButtonItem);
+      }
+  }
+};
 
   // const url = 'https://moviesdatabase.p.rapidapi.com/titles?genre=Comedy';
   // const options = {
