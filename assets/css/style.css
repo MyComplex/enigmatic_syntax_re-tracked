@@ -429,3 +429,17 @@ ul li {
   text-decoration: none;
   cursor: pointer;
 }
+
+.history-button {
+  color: white;
+  padding: .3rem;
+  font-family: var(--body-font);
+  border: 1px solid gray;
+  border-radius: .5rem;
+  min-width: 5vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px 2px var(--shadow);
+
+}

@@ -14,13 +14,21 @@ searches = (searches) ? JSON.parse(searches) : [];
 /* INITIATE SEARCH */
 searchButton.addEventListener('click', function (event) {
   event.preventDefault();
+  var searchText = document.getElementById("search-text");
+  var searches = localStorage.getItem('searches');
+  searches = (searches) ? JSON.parse(searches) : [];
   var trackTitle = searchText.value;
-  performSearch(trackTitle);
 
   searches.push(searchText.value);
   localStorage.setItem("searches", JSON.stringify(searches));
 
+  performSearch(trackTitle);
+
+  renderHistory(trackTitle);
+
 });
+
+renderHistory();
 
 function performSearch(trackTitle) {
   var trackSearchUrl = `https://api.musixmatch.com/ws/1.1/track.search?q_track=${encodeURIComponent(trackTitle)}&f_has_lyrics=1&f_is_instrumental=0&s_track_rating=desc&apikey=${apiKey}`;
@@ -59,7 +67,7 @@ function displayTrackSearchResults(trackSearchData) {
 
     /* ALBUM ART */
     var albumArt = document.createElement('img');
-    albumArt.setAttribute('src', 'https://i.scdn.co/image/ab67616d0000b2738399047ff71200928f5b6508');
+    albumArt.setAttribute('src', './assets/img/albumArt.png');
     albumArt.setAttribute('alt', artistName + ' - ' + albumName + ' cover art.');
 
     /* APPEND ALBUM ART TO ALBUM ART CONTAINER */
@@ -192,7 +200,7 @@ function searchSpotify(track, album, artist) {
   fetch(searchUrl, {
     method: 'GET',
     headers: {
-      'Authorization' : 'Bearer ' + spotifyToken
+      'Authorization': 'Bearer ' + spotifyToken
     }
   })
     .then((searchResponse) =>
@@ -235,4 +243,35 @@ function linkIconClick(event) {
     fetchLyrics(bubbleId);
   }
   event.stopPropagation();
+}
+
+/* RENDER HISTORY BUTTONS */
+function renderHistory(songTitle) {
+  var searches = localStorage.getItem('searches');
+  searches = (searches) ? JSON.parse(searches) : [];
+  var historyHolder = document.getElementById('history-container');
+  if (searches !== null) {
+    historyHolder.innerHTML = '';
+    for (var i = 0; i < searches.length; i++) {
+      var element = searches[i];
+      var historyButtonItem = document.createElement('button');
+      historyButtonItem.setAttribute('id', element);
+      historyButtonItem.setAttribute('class', "history-button")
+      historyButtonItem.textContent = element;
+      historyHolder.appendChild(historyButtonItem);
+    }
+  }
+}
+
+/* Monitor history buttons */
+var historyDiv = document.getElementById('history-container');
+
+historyDiv.addEventListener('click', historyButtonClick, false);
+
+function historyButtonClick(event) {
+    if (event.target !== event.currentTarget) {
+        var clickedItem = event.target.id;
+        performSearch(clickedItem);
+    }
+    event.stopPropagation();
 }
