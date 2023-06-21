@@ -30,13 +30,10 @@ Build an Interactive Front-End Application using everything you’ve learned tha
 * Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application). .
 
 ## Sample
-![sample](./assets/images/sample.gif)
+![sample](./assets/img/sample.gif)
 
 ## Live Website
 Browse to https://mycomplex.github.io/enigmatic_syntax_re-tracked/ to review.
-
-## License
-![MIT License](./LICENSE)
 
 ## Copyright
 TBD
