@@ -2,6 +2,14 @@
 
 ## Table of Contents
 - [Scope of Work](#scope-of-work)
+- [Technologies Used](#technologies-used)
+  - [Foundation CSS Framework](#foundation)
+  - [Swiper JS/CSS Carousel](#swiper)
+  - [Font Awesome Icons](#font-awesome)
+  - [Google Fonts](#google-fonts)
+- [Web APIs](#web-apis)
+  - [MusixMatch](#musixmatch)
+  - [Spotify](#spotify)
 - [Sample](#sample)
 - [Live Website](#live-website)
 - [Copyright](#copyright)
@@ -27,7 +35,23 @@ Build an Interactive Front-End Application using everything you’ve learned tha
 
 * Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application). .
+* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+
+## Technologies Used
+### Foundation
+[![Foundation](./assets/img/foundation.png 'The Foundation homepage')](https://get.foundation/)
+### Swiper
+[![Swiper](./assets/img/swiper.png 'The Swiper homepage')](https://swiperjs.com/)
+### Font Awesome
+[![Font Awesome](./assets/img/fontawesome.png 'The Font Awesome homepage')](https://fontawesome.com/)
+### Google Fonts
+[![Google Fonts](./assets/img/googlefonts.png 'The Google Fonts homepage')](https://fonts.google.com/)
+
+## Web APIs
+### Musixmatch
+[![Musixmatch](./assets/img/musixmatch.png 'The Musixmatch homepage')](https://www.musixmatch.com/)
+### Spotify
+[![Spotify](./assets/img/spotify.png 'The Spotify homepage')](https://www.spotify.com/)
 
 ## Sample
 ![sample](./assets/img/sample.gif)
@@ -36,4 +60,4 @@ Build an Interactive Front-End Application using everything you’ve learned tha
 Browse to https://mycomplex.github.io/enigmatic_syntax_re-tracked/ to review.
 
 ## Copyright
-TBD
+All respective owners
